@@ -1,13 +1,15 @@
 .email-input {
     @include inputBoxBaseStyle();
-}
-.email-input:focus {
-    outline: 2px solid $color-accent;
+    padding-left: 45px;
+    background-position: 10px;
+    background-image: url('../../../public/icons/mail.svg');
+    background-repeat: no-repeat;
 }
 
 .password-input {
     @include inputBoxBaseStyle();
-}
-.password-input:focus {
-    outline: 2px solid $color-accent;
+    padding-left: 45px;
+    background-position: 10px;
+    background-image: url('../../../public/icons/lock.svg');
+    background-repeat: no-repeat;
 }
