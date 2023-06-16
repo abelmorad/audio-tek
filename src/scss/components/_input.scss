@@ -1,0 +1,16 @@
+@mixin inputBoxStyle1() {
+    color: $color-grey;
+    height: 50px;
+
+    border: none;
+    outline: 1px solid $color-grey;
+    border-radius: 10px;
+}
+
+.email-input {
+    @include inputBoxStyle1();
+}
+
+.password-input {
+    @include inputBoxStyle1();
+}
