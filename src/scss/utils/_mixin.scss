@@ -9,8 +9,8 @@
 }
 
 // sign in and sign up mixin
-@mixin mobileXmargin() {
-    margin: 0rem 1.5rem;
+@mixin mobileXpadding() {
+    padding: 0rem 1.5rem;
 }
 @mixin fontSizeWeight() {
     font-size: $font-size-xs;
