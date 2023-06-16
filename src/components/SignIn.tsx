@@ -14,7 +14,7 @@ function SignIn() {
             <input className='email-input' type="email" name="email" id="emailInput" placeholder='Email' />
             <input className='password-input' type="password" name="password" id="passwordInput" placeholder='Password' />
             <a href="#">Forgot Password?</a>
-            <button type="submit">Sign In</button>
+            <button className='sign-in-btn button-primary' type="submit">Sign In</button>
             <p>Don't have an account? <a href="#">Sign Up Here</a></p>
         </form>
     </main>
