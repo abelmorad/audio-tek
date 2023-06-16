@@ -1,12 +1,14 @@
 .sign-in-container {
     @include flexColumn();
+    @include mobileXmargin();
+    @include AlignAllCenter();
+    justify-content: space-between;
     height: 100svh;
     height: 100dvh;
-    @include mobileMargin();
-    @include AlignAllCenter();
 
     .sign-in-header-wrapper {
         @include flexColumn();
+        margin-top: 4rem;
         
         p {
             font-size: $font-size-xs;
@@ -20,5 +22,6 @@
     }
     .sign-in-form-wrapper {
         @include flexColumn();
+        margin-bottom: 3rem;
     }
 }
