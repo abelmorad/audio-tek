@@ -11,17 +11,26 @@
         margin-top: 4rem;
         
         p {
-            font-size: $font-size-xs;
-            font-weight: 600
+            @include fontSizeWeight();
         }
 
         .sign-in-logo-wrapper {
             @include flexRow();
             @include AlignAllCenter();
+            margin-bottom: 1rem;
         }
     }
     .sign-in-form-wrapper {
         @include flexColumn();
         margin-bottom: 3rem;
+
+        p {
+            @include fontSizeWeight();
+        }
+
+        a {
+            margin-bottom: 2rem;
+            @include fontSizeWeight();
+        }
     }
 }
