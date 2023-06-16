@@ -3,7 +3,7 @@
   @include mobileXpadding();
   @include AlignAllCenter();
 
-  background-image: url(../public/background/signbg.png);
+  background-image: url(/public/background/signbg.png);
   background-size: cover;
 
   justify-content: space-between;
