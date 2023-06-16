@@ -1,4 +1,4 @@
-//layout mixin
+// layout 
 @mixin flexColumn() {
     display: flex;
     flex-direction: column;
@@ -6,4 +6,17 @@
 @mixin flexRow() {
     display: flex;
     flex-direction: row;
+}
+
+// mobile margin
+@mixin mobileMargin() {
+    margin: 0 1.5rem;
+}
+
+// aligments
+@mixin AlignAllCenter() {
+    text-align: center;
+    place-content: center;
+    justify-content: center;
+    align-items: center;
 }
