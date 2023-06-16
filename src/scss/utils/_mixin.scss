@@ -1,4 +1,4 @@
-// layout 
+// flex layout 
 @mixin flexColumn() {
     display: flex;
     flex-direction: column;
@@ -8,10 +8,15 @@
     flex-direction: row;
 }
 
-// mobile margin
-@mixin mobileMargin() {
-    margin: 0 1.5rem;
+// sign in and sign up mixin
+@mixin mobileXmargin() {
+    margin: 0rem 1.5rem;
 }
+@mixin fontSizeWeight() {
+    font-size: $font-size-xs;
+    font-weight: 600
+}
+
 
 // aligments
 @mixin AlignAllCenter() {
@@ -19,4 +24,15 @@
     place-content: center;
     justify-content: center;
     align-items: center;
+}
+
+//input box 
+@mixin inputBoxBaseStyle() {
+    color: $color-grey;
+    height: 50px;
+
+    border: none;
+    outline: 1px solid $color-grey;
+    border-radius: 10px;
+    margin-bottom: 1rem; 
 }
