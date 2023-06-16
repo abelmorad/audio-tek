@@ -11,6 +11,7 @@ function SignIn() {
             <p>It's modular and designed to last</p>
         </header>
         <form className='sign-in-form-wrapper'>
+        <h2>Sign In</h2>
             <input className='email-input' type="email" name="email" id="emailInput" placeholder='Email' />
             <input className='password-input' type="password" name="password" id="passwordInput" placeholder='Password' />
             <a href="#">Forgot Password?</a>
