@@ -17,6 +17,31 @@
     font-weight: 600
 }
 
+// input box 
+@mixin inputBoxBaseStyle() {
+    color: $color-grey;
+    height: 50px;
+    width: 326px;
+
+    border: none;
+    outline: 1px solid $color-grey;
+    border-radius: 10px;
+    margin-bottom: 1rem; 
+}
+
+//buttons
+@mixin wideButton() {
+    font-weight: $font-weight-6;
+    color: $color-white;
+    background-color: $color-primary;
+    height: 50px;
+    width: 326px;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+
 
 // aligments
 @mixin AlignAllCenter() {
@@ -26,13 +51,4 @@
     align-items: center;
 }
 
-//input box 
-@mixin inputBoxBaseStyle() {
-    color: $color-grey;
-    height: 50px;
-
-    border: none;
-    outline: 1px solid $color-grey;
-    border-radius: 10px;
-    margin-bottom: 1rem; 
-}
+.
