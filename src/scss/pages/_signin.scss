@@ -1,11 +1,21 @@
 .sign-in-container {
     @include flexColumn();
+    height: 100svh;
+    height: 100dvh;
+    @include mobileMargin();
+    @include AlignAllCenter();
 
     .sign-in-header-wrapper {
         @include flexColumn();
+        
+        p {
+            font-size: $font-size-xs;
+            font-weight: 600
+        }
 
         .sign-in-logo-wrapper {
             @include flexRow();
+            @include AlignAllCenter();
         }
     }
     .sign-in-form-wrapper {
