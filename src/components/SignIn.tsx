@@ -5,7 +5,7 @@ function SignIn() {
     <main className='sign-in-container'>
         <header className='sign-in-header-wrapper'>
             <div className="sign-in-logo-wrapper">
-                <img src={logo} alt="audio tek logo"/>
+                <img style={{height: '40px', width: '40px'}} src={logo} alt="audio tek logo"/>
                 <h1>Audio Tek</h1>
             </div>
             <p>It's modular and designed to last</p>
