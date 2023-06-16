@@ -1,5 +1,7 @@
 import logo from '../../public/logo.svg'
 
+import { Link } from 'react-router-dom'
+
 function SignUp() {
   return (
     <main className='sign-in-container'>
@@ -27,7 +29,7 @@ function SignUp() {
                     <a href="#"></a>
                 </div>
             </div>
-            <p>Already have an account? <a href="#">Sign In Here</a></p>
+            <p>Already have an account? <Link to='/'>Sign In Here</Link></p>
         </form>
     </main>
   )
