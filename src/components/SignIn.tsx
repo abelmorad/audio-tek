@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../public/logo.svg";
 
 function SignIn() {
@@ -35,7 +36,7 @@ function SignIn() {
           Sign In
         </button>
         <p>
-          Don't have an account? <a href="#">Sign Up Here</a>
+          Don't have an account? <Link to='signup'>Sign Up Here</Link>
         </p>
       </form>
     </main>
