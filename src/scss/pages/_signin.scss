@@ -1,0 +1,14 @@
+.sign-in-container {
+    @include flexColumn();
+
+    .sign-in-header-wrapper {
+        @include flexColumn();
+
+        .sign-in-logo-wrapper {
+            @include flexRow();
+        }
+    }
+    .sign-in-form-wrapper {
+        @include flexColumn();
+    }
+}

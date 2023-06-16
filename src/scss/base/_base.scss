@@ -3,3 +3,11 @@
 
 // ----- modern normalize -----
 @import 'node_modules/modern-normalize/modern-normalize.css';
+
+* {
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: none;
+}
+h1,a,p,li,span {
+    margin: 0;
+}
