@@ -15,6 +15,18 @@ function SignUp() {
             <input className='email-input' type="email" name="email" id="emailInput" placeholder='Email' />
             <input className='password-input' type="password" name="password" id="passwordInput" placeholder='Password' />
             <button className='sign-in-btn button-primary' type="submit">Sign Up</button>
+            <span>OR</span>
+            <div className='auth-wrapper'>
+                <div className='apple-auth'>
+                    <a href="#"></a>
+                </div>
+                <div className='fb-auth'>
+                    <a href="#"></a>
+                </div>
+                <div className='google-auth'>
+                    <a href="#"></a>
+                </div>
+            </div>
             <p>Already have an account? <a href="#">Sign In Here</a></p>
         </form>
     </main>
