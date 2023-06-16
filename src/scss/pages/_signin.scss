@@ -1,10 +1,16 @@
 .sign-in-container {
     @include flexColumn();
-    @include mobileXmargin();
+    @include mobileXpadding();
     @include AlignAllCenter();
+
+    background-image: url('../../../public/background/signbg.png');
+    background-size: cover;
+    
     justify-content: space-between;
     height: 100svh;
     height: 100dvh;
+
+    color: $color-white;
 
     .sign-in-header-wrapper {
         @include flexColumn();
@@ -31,6 +37,8 @@
         }
 
         a {
+            text-decoration: underline;
+            color: $color-primary;
             margin-bottom: 2rem;
             @include fontSizeWeight();
             width: fit-content;
