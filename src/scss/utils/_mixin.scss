@@ -19,6 +19,7 @@
 
 // input box 
 @mixin inputBoxBaseStyle() {
+    background-color: $color-white;
     color: $color-grey;
     height: 50px;
     width: 326px;
