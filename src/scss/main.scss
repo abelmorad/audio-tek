@@ -1,24 +1,22 @@
 //----- variables -----
-@import './utils/mixin';
-@import './utils/variables';
+@import "./utils/mixin";
+@import "./utils/variables";
 
 //----- base -----
-@import './base/base';
+@import "./base/base";
 
 //----- layout -----
 
-
 //----- components -----
-@import './components/input';
-@import './components/button';
-@import './components/authlink';
+@import "./components/input";
+@import "./components/button";
+@import "./components/authlink";
 
 //----- pages -----
-@import './pages/signin';
-
+@import "./pages/signin";
 
 //----- themes -----
 
 :focus {
-    outline: 2px solid $color-primary;
+  outline: 2px solid $color-primary;
 }

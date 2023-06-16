@@ -1,51 +1,51 @@
 .sign-in-container {
+  @include flexColumn();
+  @include mobileXpadding();
+  @include AlignAllCenter();
+
+  background-image: url("../../../public/background/signbg.png");
+  background-size: cover;
+
+  justify-content: space-between;
+  height: 100svh;
+  height: 100dvh;
+
+  color: $color-white;
+
+  .sign-in-header-wrapper {
     @include flexColumn();
-    @include mobileXpadding();
+    margin-top: 4rem;
+
+    p {
+      @include fontSizeWeight();
+    }
+
+    .sign-in-logo-wrapper {
+      @include flexRow();
+      @include AlignAllCenter();
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+  }
+  .sign-in-form-wrapper {
+    @include flexColumn();
     @include AlignAllCenter();
+    margin-bottom: 3rem;
 
-    background-image: url('../../../public/background/signbg.png');
-    background-size: cover;
-    
-    justify-content: space-between;
-    height: 100svh;
-    height: 100dvh;
-
-    color: $color-white;
-
-    .sign-in-header-wrapper {
-        @include flexColumn();
-        margin-top: 4rem;
-        
-        p {
-            @include fontSizeWeight();
-        }
-
-        .sign-in-logo-wrapper {
-            @include flexRow();
-            @include AlignAllCenter();
-            justify-content: space-between;
-            margin-bottom: 1rem;
-        }
+    p {
+      @include fontSizeWeight();
     }
-    .sign-in-form-wrapper {
-        @include flexColumn();
-        @include AlignAllCenter();
-        margin-bottom: 3rem;
 
-        p {
-            @include fontSizeWeight();
-        }
-
-        a {
-            text-decoration: underline;
-            color: $color-primary;
-            margin-bottom: 2rem;
-            @include fontSizeWeight();
-            width: fit-content;
-        }
-
-        .sign-in-btn {
-            margin-bottom: 1rem;
-        }
+    a {
+      text-decoration: underline;
+      color: $color-primary;
+      margin-bottom: 2rem;
+      @include fontSizeWeight();
+      width: fit-content;
     }
+
+    .sign-in-btn {
+      margin-bottom: 1rem;
+    }
+  }
 }

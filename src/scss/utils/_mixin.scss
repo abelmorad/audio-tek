@@ -1,52 +1,52 @@
-// flex layout 
+// flex layout
 @mixin flexColumn() {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 @mixin flexRow() {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 // sign in and sign up mixin
 @mixin mobileXpadding() {
-    padding: 0rem 1.5rem;
+  padding: 0rem 1.5rem;
 }
 @mixin fontSizeWeight() {
-    font-size: $font-size-xs;
-    font-weight: 600
+  font-size: $font-size-xs;
+  font-weight: 600;
 }
 
-// input box 
+// input box
 @mixin inputBoxBaseStyle() {
-    background-color: $color-white;
-    color: $color-grey;
-    height: 50px;
-    width: 326px;
+  background-color: $color-white;
+  color: $color-grey;
+  height: 50px;
+  width: 326px;
 
-    border: none;
-    outline: 1px solid $color-grey;
-    border-radius: 10px;
-    margin-bottom: 1rem; 
+  border: none;
+  outline: 1px solid $color-grey;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 }
 
 //buttons
 @mixin wideButton() {
-    font-weight: $font-weight-6;
-    color: $color-white;
-    background-color: $color-primary;
-    height: 50px;
-    width: 326px;
+  font-weight: $font-weight-6;
+  color: $color-white;
+  background-color: $color-primary;
+  height: 50px;
+  width: 326px;
 
-    border: none;
-    outline: none;
-    border-radius: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
 }
 
 // aligments
 @mixin AlignAllCenter() {
-    text-align: center;
-    place-content: center;
-    justify-content: center;
-    align-items: center;
+  text-align: center;
+  place-content: center;
+  justify-content: center;
+  align-items: center;
 }

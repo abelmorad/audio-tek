@@ -1,15 +1,15 @@
 .email-input {
-    @include inputBoxBaseStyle();
-    padding-left: 45px;
-    background-position: 10px;
-    background-image: url('../../../public/icon/mail.svg');
-    background-repeat: no-repeat;
+  @include inputBoxBaseStyle();
+  padding-left: 45px;
+  background-position: 10px;
+  background-image: url("../../../public/icon/mail.svg");
+  background-repeat: no-repeat;
 }
 
 .password-input {
-    @include inputBoxBaseStyle();
-    padding-left: 45px;
-    background-position: 10px;
-    background-image: url('../../../public/icon/lock.svg');
-    background-repeat: no-repeat;
+  @include inputBoxBaseStyle();
+  padding-left: 45px;
+  background-position: 10px;
+  background-image: url("../../../public/icon/lock.svg");
+  background-repeat: no-repeat;
 }
