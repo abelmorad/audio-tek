@@ -1,16 +1,13 @@
-@mixin inputBoxStyle1() {
-    color: $color-grey;
-    height: 50px;
-
-    border: none;
-    outline: 1px solid $color-grey;
-    border-radius: 10px;
-}
-
 .email-input {
-    @include inputBoxStyle1();
+    @include inputBoxBaseStyle();
+}
+.email-input:focus {
+    outline: 2px solid $color-accent;
 }
 
 .password-input {
-    @include inputBoxStyle1();
+    @include inputBoxBaseStyle();
+}
+.password-input:focus {
+    outline: 2px solid $color-accent;
 }
