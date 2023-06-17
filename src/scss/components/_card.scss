@@ -1,0 +1,25 @@
+.category-card {
+    @include flexRow();
+    text-align: start;
+    padding-left: 20px;
+    border-radius: 20px;
+    background-color: $color-white;
+
+    a {
+        font-size: 14px;
+    }
+    .shop-now {
+        padding: 4px 0px;
+        background-image: url(/public/icon/arrow-right.svg);
+        background-repeat: no-repeat;
+        background-position: right;
+        margin-right: 35px;
+
+        font-weight: $font-weight-6;
+        color: $color-primary;
+    }
+
+    .card-title-wrapper {
+        @include flexColumn();
+    }
+}
