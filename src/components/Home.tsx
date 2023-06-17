@@ -31,7 +31,7 @@ function Home() {
       </main>
       <section className="home-products-container">
         <div className="product-category-wrapper">
-          <a href="#">Headphone</a>
+          <a className="home-category-active" href="#">Headphone</a>
           <a href="#">Headband</a>
           <a href="#">Earpads</a>
           <a href="#">Cables</a>
