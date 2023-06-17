@@ -4,7 +4,9 @@ import headphone from "../../public/icon/headphone.svg";
 import cable from "../../public/icon/cable.svg"
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
+import 'swiper/swiper-bundle.css'
+import 'swiper/swiper-bundle.esm.js'
+import 'swiper/css/autoplay'
 
 import ProductCard from "./ProductCard";
 
@@ -40,6 +42,9 @@ function Home() {
         <div className="product-category-wrapper">
         <h3>Our Products</h3>
         <Swiper
+        autoplay
+        pagination
+        spaceBetween={10}
          slidesPerView={1}
         >
             <SwiperSlide>
