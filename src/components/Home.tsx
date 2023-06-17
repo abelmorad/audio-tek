@@ -1,10 +1,12 @@
 import logo from "../../public/logo.svg";
 import user from "../../public/userprofile.png";
+import headphone from "../../public/icon/headphone.svg";
+import cable from "../../public/icon/cable.svg"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 
-
+import ProductCard from "./ProductCard";
 
 function Home() {
   return (
@@ -36,10 +38,24 @@ function Home() {
       </main>
       <section className="home-products-container">
         <div className="product-category-wrapper">
+        <h3>Our Products</h3>
         <Swiper
-         slidesPerView={3}
+         slidesPerView={1}
         >
-            <h3>Our Products</h3>
+            <SwiperSlide>
+              <ProductCard
+                category="TMA-2 Modular Headphone"
+                src={headphone}
+                alt={headphone}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCard
+                category="CO2 - Cable"
+                src={cable}
+                alt={cable}
+              />
+            </SwiperSlide>
         </Swiper>
         </div>
       </section>
