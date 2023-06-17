@@ -47,29 +47,11 @@
   height: 100vh;
 
   .product-category-wrapper {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding: 20px;
-    overflow: auto;
-    white-space: nowrap;
+    @include mobileXpadding();
 
-    a {
-        margin-right: 15px;
-        padding: 2px 15px;
-        font-size: $font-size-xs;
-        color: $color-dark-grey;
+    h3 {
+      padding-top: 1.5rem;
+      text-align: start;
     }
-    .home-category-active { 
-        border-radius: 30px;
-        background-color: $color-primary;
-        color: $color-white;
-    }
-
-    :focus {
-        outline: none;
-    }
-  }
-  .product-category-wrapper::-webkit-scrollbar {
-    display: none;
   }
 }
