@@ -1,13 +1,11 @@
 import logo from "../../public/logo.svg";
-import user from "../../public/userprofile.png"
+import user from "../../public/userprofile.png";
 
 function Home() {
   return (
     <main className="home-container">
-        <nav>
-            <menu
-                className="menu-icon"
-            />
+      <nav>
+        <menu className="menu-icon" />
         <div className="home-logo-wrapper">
           <img
             style={{ height: "20px", width: "20px" }}
@@ -17,11 +15,16 @@ function Home() {
           <h1>Audio Tek</h1>
         </div>
         <figure>
-            <img src={user} alt="dude"/>
+          <img src={user} alt="dude" />
         </figure>
-        </nav>
+      </nav>
+      <section className="search-wrapper">
+        <p>Hi, Abel</p>
+        <h2>What are you looking for today?</h2>
+        <input className="search-box" type="search" placeholder="Search product" />
+      </section>
     </main>
-  )
+  );
 }
 
-export default Home
+export default Home;
