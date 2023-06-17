@@ -1,0 +1,30 @@
+.home-container {
+    @include flexColumn();
+    @include mobileXpadding();
+
+    nav {
+        @include flexRow();
+        @include AlignAllCenter();
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        .menu-icon {
+            background-image: url(/public/icon/menu-variant.png);
+            background-repeat: no-repeat;
+            
+            height: 20px;
+            width: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        figure {
+            margin: 0;
+        }
+    }
+
+    .home-logo-wrapper {
+        @include flexRow();
+        @include AlignAllCenter();
+        gap: 5px;
+    }
+}
