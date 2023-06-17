@@ -1,30 +1,41 @@
 .home-container {
-    @include flexColumn();
-    @include mobileXpadding();
+  @include flexColumn();
+  @include mobileXpadding();
 
-    nav {
-        @include flexRow();
-        @include AlignAllCenter();
-        justify-content: space-between;
-        margin-top: 1rem;
+  nav {
+    @include flexRow();
+    @include AlignAllCenter();
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 
-        .menu-icon {
-            background-image: url(/public/icon/menu-variant.png);
-            background-repeat: no-repeat;
-            
-            height: 20px;
-            width: 20px;
-            margin: 0;
-            padding: 0;
-        }
-        figure {
-            margin: 0;
-        }
+    .menu-icon {
+      background-image: url(/public/icon/menu-variant.png);
+      background-repeat: no-repeat;
+
+      height: 20px;
+      width: 20px;
+      margin: 0;
+      padding: 0;
     }
 
     .home-logo-wrapper {
-        @include flexRow();
-        @include AlignAllCenter();
-        gap: 5px;
+      @include flexRow();
+      @include AlignAllCenter();
+      gap: 5px;
     }
+
+    figure {
+      margin: 0;
+    }
+  }
+
+  .search-wrapper {
+    @include flexColumn();
+
+    h2 {
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
+    }
+  }
 }
