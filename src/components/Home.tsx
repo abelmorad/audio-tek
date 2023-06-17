@@ -1,7 +1,10 @@
 import logo from "../../public/logo.svg";
 import user from "../../public/userprofile.png";
 import headphone from "../../public/icon/headphone.svg";
+import earpads from "../../public/icon/earpads.png";
+import headband from "../../public/icon/headband.png";
 import cable from "../../public/icon/cable.svg"
+import speakerunit from "../../public/icon/speakerunit.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css'
@@ -49,9 +52,30 @@ function Home() {
         >
             <SwiperSlide>
               <ProductCard
-                category="TMA-2 Modular Headphone"
+                category="TMA - 2 Modular Headphone"
                 src={headphone}
                 alt={headphone}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCard
+                category="E01 On ear - Microfiber"
+                src={headband}
+                alt={headband}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCard
+                category="S02 Punchy Sound"
+                src={speakerunit}
+                alt={speakerunit}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ProductCard
+                category="E01 - Earpads"
+                src={earpads}
+                alt={earpads}
               />
             </SwiperSlide>
             <SwiperSlide>
