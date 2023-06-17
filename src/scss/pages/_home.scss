@@ -48,12 +48,19 @@
   height: 100vh;
 
   .product-category-wrapper {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     padding-top: 30px;
+    overflow: auto;
+    white-space: nowrap;
 
     a {
         margin-right: 40px;
         font-size: $font-size-xs;
         color: $color-dark-grey;
     }
+  }
+  .product-category-wrapper::-webkit-scrollbar {
+    display: none;
   }
 }
