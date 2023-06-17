@@ -1,6 +1,11 @@
 import logo from "../../public/logo.svg";
 import user from "../../public/userprofile.png";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+
+
+
 function Home() {
   return (
     <>
@@ -31,10 +36,11 @@ function Home() {
       </main>
       <section className="home-products-container">
         <div className="product-category-wrapper">
-          <a className="home-category-active" href="#">Headphone</a>
-          <a href="#">Headband</a>
-          <a href="#">Earpads</a>
-          <a href="#">Cables</a>
+        <Swiper
+         slidesPerView={3}
+        >
+            <h3>Our Products</h3>
+        </Swiper>
         </div>
       </section>
     </>
