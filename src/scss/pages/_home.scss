@@ -34,8 +34,26 @@
     @include flexColumn();
 
     h2 {
-        margin-top: 0.3rem;
-        margin-bottom: 1rem;
+      margin-top: 0.3rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.home-products-container {
+  @include mobileXpadding();
+  @include AlignAllCenter();
+  border-radius: 20px 20px 0px 0px;
+  background-color: $color-light-grey-1;
+  height: 100vh;
+
+  .product-category-wrapper {
+    padding-top: 30px;
+
+    a {
+        margin-right: 40px;
+        font-size: $font-size-xs;
+        color: $color-dark-grey;
     }
   }
 }
