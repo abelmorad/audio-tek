@@ -3,13 +3,13 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBKHwR4iyTfjNdqJwCNEQcIrpSyomSdbVA",
-  authDomain: "audio-tek.firebaseapp.com",
-  projectId: "audio-tek",
-  storageBucket: "audio-tek.appspot.com",
-  messagingSenderId: "151382597529",
-  appId: "1:151382597529:web:92dba3f01bb611c7187d08",
-  measurementId: "G-XGTET115MV"
+  apiKey: `${process.env.FIREBASE_API_KEY}`,
+  authDomain: `${process.env.FIREBASE_AUTH_DOMAIN}`,
+  projectId: `${process.env.FIREBASE_PROJECT_ID}`,
+  storageBucket: `${process.env.FIREBASE_STORAGE_BUCKET}`,
+  messagingSenderId: `${process.env.FIREBASE_MESSAGE_SENDER_ID}`,
+  appId: `${process.env.FIREBASE_APP_ID}`,
+  measurementId: `${process.env.FIREBASE_MEASUREMENT_ID}`,
 };
 
 // Initialize Firebase
