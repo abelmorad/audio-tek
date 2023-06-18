@@ -1,7 +1,17 @@
 import logo from "../../public/logo.svg";
 import { Link } from "react-router-dom";
 
+import { auth } from "../config/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useState } from "react";
+
 function SignUp() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = async () => {
+    await createUserWithEmailAndPassword(auth, email, password);
+  };
 
   return (
     <main className="sign-in-container">
@@ -24,7 +34,7 @@ function SignUp() {
           name="email"
           id="emailInput"
           placeholder="Email"
-        //   onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
         />
         <input
           className="password-input"
@@ -32,12 +42,12 @@ function SignUp() {
           name="password"
           id="passwordInput"
           placeholder="Password"
-        //   onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
         />
         <button
           className="sign-in-btn button-primary"
           type="submit"
-        //   onClick={signup}
+          onClick={signIn}
         >
           Sign Up
         </button>
