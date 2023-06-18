@@ -6,12 +6,19 @@ import headband from "../../public/icon/headband.png";
 import cable from "../../public/icon/cable.svg"
 import speakerunit from "../../public/icon/speakerunit.png";
 
+import tracks from "../../public/products/tracks.png";
+import c17adapterneon from "../../public/products/c17adapterneon.png";
+import tma2studiowireless from "../../public/products/tma2studiowireless.png";
+import maharishiwaistbag from "../../public/products/maharishibag.png";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css'
 import 'swiper/swiper-bundle.esm.js'
 import 'swiper/css/autoplay'
 
 import ProductCard from "./ProductCard";
+import FeaturedCard from "./FeaturedCard";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -21,7 +28,7 @@ function Home() {
           <menu className="menu-icon" />
           <div className="home-logo-wrapper">
             <img
-              style={{ height: "20px", width: "20px" }}
+              style={ {height: "20px", width: "20px"} }
               src={logo}
               alt="audio tek logo"
             />
@@ -32,8 +39,10 @@ function Home() {
           </figure>
         </nav>
         <section className="search-wrapper">
-          <p>Hi, Abel</p>
-          <h2>What are you looking for today?</h2>
+          <header>
+            <p>Hi, Abel</p>
+            <h2>What are you looking for today?</h2>
+          </header>
           <input
             className="search-box"
             type="search"
@@ -42,13 +51,13 @@ function Home() {
         </section>
       </main>
       <section className="home-products-container">
-        <div className="product-category-wrapper">
+        <section className="product-category-wrapper">
         <h3>Our Products</h3>
         <Swiper
         autoplay
         pagination
         spaceBetween={10}
-         slidesPerView={1}
+        slidesPerView={1}
         >
             <SwiperSlide>
               <ProductCard
@@ -59,7 +68,7 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <ProductCard
-                category="E01 On ear - Microfiber"
+                category="H01 Slim - PU foam"
                 src={headband}
                 alt={headband}
               />
@@ -73,7 +82,7 @@ function Home() {
             </SwiperSlide>
             <SwiperSlide>
               <ProductCard
-                category="E01 - Earpads"
+                category="E01 On ear Microfiber Diaphragm"
                 src={earpads}
                 alt={earpads}
               />
@@ -86,7 +95,54 @@ function Home() {
               />
             </SwiperSlide>
         </Swiper>
-        </div>
+        </section>
+        <section className="featured-card-container">
+          <header className="feature-title">
+            <h3>Featured Products</h3>
+            <Link to='#'>See All</Link>
+          </header>
+          <Swiper
+          spaceBetween={25}
+            slidesPerView={2}
+          >
+            <SwiperSlide>
+              <FeaturedCard
+                src={maharishiwaistbag}
+                alt={maharishiwaistbag}
+                productname="Maharishi Waist Bag"
+                currency="USD"
+                price={120}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <FeaturedCard
+                src={tracks}
+                alt={tracks}
+                productname="Tracks"
+                currency="USD"
+                price={60}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <FeaturedCard
+                src={c17adapterneon}
+                alt={c17adapterneon}
+                productname="C17 Neon w/ Mic"
+                currency="USD"
+                price={25}
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <FeaturedCard
+                src={tma2studiowireless}
+                alt={tma2studiowireless}
+                productname="TM2-2 Studio Wireless+"
+                currency="USD"
+                price={350}
+              />
+            </SwiperSlide>
+          </Swiper>
+        </section>
       </section>
     </>
   );

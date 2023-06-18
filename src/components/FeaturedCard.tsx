@@ -14,13 +14,13 @@ function FeaturedCard({
     price: number;
   }) {
   return (
-    <section className="featured card">
+    <section className="featured-card-wrapper">
         <figure>
-            <img src={src} alt={alt} />
+            <img className="featured-card-img" src={src} alt={alt} />
         </figure>
         <div className="item-price-wrapper">
             <p>{productname}</p>
-            <p>{currency} {price}</p>
+            <b>{currency} {price}</b>
         </div>
     </section>
   )

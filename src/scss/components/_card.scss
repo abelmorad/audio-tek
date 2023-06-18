@@ -1,31 +1,54 @@
 .category-card {
-    @include flexRow();
-    text-align: start;
+  @include flexRow();
+  text-align: start;
+  padding-left: 20px;
+  border-radius: 10px;
+  background-color: $color-white;
+  width: 100%;
+  height: 178px;
+
+  a {
+    font-size: 14px;
+  }
+  .shop-now {
+    padding: 4px 0px;
+    background-image: url(/public/icon/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: 80px;
+
+    font-weight: $font-weight-6;
+    color: $color-primary;
+  }
+
+  .card-title-wrapper {
+    @include flexColumn();
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+  figure {
+    margin: 20px 20px 10px 40px;
+  }
+}
+
+// featured card
+.featured-card-wrapper {
+  @include flexColumn();
+  background-color: $color-white;
+  border-radius: 15px;
+  height: 230px;
+  width: 155px;
+
+  figure {
+    display: flex;
+    @include AlignAllCenter();
+
+    .featured-card-img {
+      height: 125px;
+      width: 135px;
+    }
+  }
+  .item-price-wrapper {
     padding-left: 20px;
-    border-radius: 20px;
-    background-color: $color-white;
-    width: 100%;
-    height: 178px;
-
-    a {
-        font-size: 14px;
-    }
-    .shop-now {
-        padding: 4px 0px;
-        background-image: url(/public/icon/arrow-right.svg);
-        background-repeat: no-repeat;
-        background-position: 80px;
-
-        font-weight: $font-weight-6;
-        color: $color-primary;
-    }
-
-    .card-title-wrapper {
-        @include flexColumn();
-        justify-content: space-between;
-        padding-bottom: 20px;
-    }
-    figure {
-        margin: 20px 20px 10px 40px;
-    }
+    text-align: start;
+  }
 }

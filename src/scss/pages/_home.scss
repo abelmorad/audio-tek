@@ -44,7 +44,7 @@
   @include AlignAllCenter();
   border-radius: 20px 20px 0px 0px;
   background-color: $color-light-grey-1;
-  height: 100vh;
+  padding-bottom: 2rem;
 
   .product-category-wrapper {
     @include mobileXpadding();
@@ -52,6 +52,21 @@
     h3 {
       padding-top: 1.5rem;
       text-align: start;
+    }
+  }
+
+  .featured-card-container {
+    @include mobileXpadding();
+
+    .feature-title {
+      @include flexRow();
+      align-items: center;
+      justify-content: space-between;
+
+      a {
+        padding-top: 2px;
+        color: $color-primary;
+      }
     }
   }
 }
