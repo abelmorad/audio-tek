@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import logo from "../../public/logo.svg";
 
+
 function SignIn() {
+  
   return (
     <main className="sign-in-container">
       <header className="sign-in-header-wrapper">
@@ -32,11 +34,14 @@ function SignIn() {
           placeholder="Password"
         />
         <a href="#">Forgot Password?</a>
-        <button className="sign-in-btn button-primary" type="submit">
+        <button
+          className="sign-in-btn button-primary"
+          type="submit"
+        >
           Sign In
         </button>
         <p>
-          Don't have an account? <Link to='signup'>Sign Up Here</Link>
+          Don't have an account? <Link to="signup">Sign Up Here</Link>
         </p>
       </form>
     </main>
