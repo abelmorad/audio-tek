@@ -48,7 +48,11 @@
     }
   }
   .item-price-wrapper {
-    padding-left: 20px;
+    @include flexColumn();
+    padding-left: 15px;
+    padding-bottom: 15px;
     text-align: start;
+    justify-content: space-between;
+    height: 100%;
   }
 }
