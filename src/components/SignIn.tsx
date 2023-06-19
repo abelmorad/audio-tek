@@ -21,7 +21,7 @@ function SignIn() {
     }
   }
 
-  const handleSignIn = (e:any) => {
+  function handleSignIn (e:any) {
     e.preventDefault();
   }
 
