@@ -33,9 +33,9 @@ function SignUp() {
     }
   };
 
-  const logout = async () => {
+  async function logout() {
     await signOut(auth);
-  };
+  }
 
   function formPreventDefault(e: any) {
     e.preventDefault();
@@ -55,7 +55,9 @@ function SignUp() {
         <p>It's modular and designed to last</p>
       </header>
       <p>{user?.email}</p>
-      <button onClick={logout} onSubmit={formPreventDefault}>Sign Out</button>
+      <button onClick={logout} onSubmit={formPreventDefault}>
+        Sign Out
+      </button>
       <form className="sign-in-form-wrapper" onSubmit={formPreventDefault}>
         <h2>Sign Up</h2>
         <input
