@@ -40,7 +40,7 @@ function Home() {
         </nav>
         <section className="search-wrapper">
           <header>
-            <p>Hi, Abel</p>
+            <p>Hi,</p>
             <h2>What are you looking for today?</h2>
           </header>
           <input
