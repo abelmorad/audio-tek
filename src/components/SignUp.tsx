@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 function SignUp() {
   const [registerEmail, setRegisterEmail] = useState<any>("");
   const [registerPassword, setRegisterPassword] = useState<any>("");
+  const [error, setError] = useState<any>("");
 
   const [user, setUser] = useState<any>({});
 
@@ -20,7 +21,8 @@ function SignUp() {
     });
   }, []);
 
-  async function signUp() {
+  async function signUp(e: any) {
+    e.preventDefault();
     try {
       const userEmailPassword = await createUserWithEmailAndPassword(
         auth,
@@ -28,8 +30,9 @@ function SignUp() {
         registerPassword
       );
       console.log(userEmailPassword);
-    } catch (error) {
-      console.log(error);
+    } catch (err: any) {
+      setError("Email already is use!")
+      console.log(err.message);
     }
   }
 
@@ -37,7 +40,7 @@ function SignUp() {
     await signOut(auth);
   }
 
-  function formPreventDefault(e: any) {
+  function handleSubmit(e: any) {
     e.preventDefault();
   }
 
@@ -55,11 +58,10 @@ function SignUp() {
         <p>It's modular and designed to last</p>
       </header>
       <p>{user?.email}</p>
-      <button onClick={logout} onSubmit={formPreventDefault}>
-        Sign Out
-      </button>
-      <form className="sign-in-form-wrapper" onSubmit={formPreventDefault}>
+      <button onClick={logout}>Sign Out</button>
+      <form className="sign-in-form-wrapper" onSubmit={handleSubmit}>
         <h2>Sign Up</h2>
+        <p>{error}</p>
         <input
           className="email-input"
           type="email"
