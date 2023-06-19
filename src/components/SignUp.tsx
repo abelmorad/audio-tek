@@ -31,7 +31,7 @@ function SignUp() {
       );
       console.log(userEmailPassword);
     } catch (err: any) {
-      setError("Email already is use!");
+      setError("Enter email and password");
       console.log(err.message);
     }
   }
