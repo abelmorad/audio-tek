@@ -1,10 +1,10 @@
 import logo from "../../public/logo.svg";
 import { Link } from "react-router-dom";
-
 import { auth } from "../config/firebase";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 import { useState, useEffect } from "react";
 
@@ -32,8 +32,12 @@ function SignUp() {
       console.log(error);
     }
   };
-  
-  function formPreventDefault(e:any) {
+
+  const logout = async () => {
+    await signOut(auth);
+  };
+
+  function formPreventDefault(e: any) {
     e.preventDefault();
   }
 
@@ -50,7 +54,8 @@ function SignUp() {
         </div>
         <p>It's modular and designed to last</p>
       </header>
-      <p>{user.email}</p>
+      <p>{user?.email}</p>
+      <button onClick={logout} onSubmit={formPreventDefault}>Sign Out</button>
       <form className="sign-in-form-wrapper" onSubmit={formPreventDefault}>
         <h2>Sign Up</h2>
         <input

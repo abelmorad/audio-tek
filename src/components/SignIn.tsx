@@ -1,8 +1,30 @@
 import { Link } from "react-router-dom";
 import logo from "../../public/logo.svg";
+import { useState } from "react";
+import { auth } from "../config/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 
 function SignIn() {
+  const [signInEmail, setSignInEmail] = useState<any>("");
+  const [signInpassword, setSignInPassword] = useState<any>("");
+
+  const signin = async () => {
+    try {
+      const userEmailPassword = await signInWithEmailAndPassword(
+        auth,
+        signInEmail,
+        signInpassword
+      );
+      console.log(userEmailPassword);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  function formPreventDefault(e: any) {
+    e.preventDefault();
+  }
   
   return (
     <main className="sign-in-container">
@@ -17,7 +39,7 @@ function SignIn() {
         </div>
         <p>It's modular and designed to last</p>
       </header>
-      <form className="sign-in-form-wrapper">
+      <form className="sign-in-form-wrapper" onSubmit={formPreventDefault}>
         <h2>Sign In</h2>
         <input
           className="email-input"
@@ -25,6 +47,7 @@ function SignIn() {
           name="email"
           id="emailInput"
           placeholder="Email"
+          onChange={(e) => setSignInEmail(e.target.value)}
         />
         <input
           className="password-input"
@@ -32,11 +55,13 @@ function SignIn() {
           name="password"
           id="passwordInput"
           placeholder="Password"
+          onChange={(e) => setSignInPassword(e.target.value)}
         />
         <a href="#">Forgot Password?</a>
         <button
           className="sign-in-btn button-primary"
           type="submit"
+          onClick={signin}
         >
           Sign In
         </button>
