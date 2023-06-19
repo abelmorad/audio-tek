@@ -4,12 +4,11 @@ import { useState } from "react";
 import { auth } from "../config/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-
 function SignIn() {
   const [signInEmail, setSignInEmail] = useState<any>("");
   const [signInpassword, setSignInPassword] = useState<any>("");
 
-  const signin = async () => {
+  async function signin() {
     try {
       const userEmailPassword = await signInWithEmailAndPassword(
         auth,
@@ -22,10 +21,10 @@ function SignIn() {
     }
   }
 
-  function formPreventDefault(e: any) {
+  const handleSignIn = (e:any) => {
     e.preventDefault();
   }
-  
+
   return (
     <main className="sign-in-container">
       <header className="sign-in-header-wrapper">
@@ -39,7 +38,7 @@ function SignIn() {
         </div>
         <p>It's modular and designed to last</p>
       </header>
-      <form className="sign-in-form-wrapper" onSubmit={formPreventDefault}>
+      <form className="sign-in-form-wrapper" onSubmit={handleSignIn}>
         <h2>Sign In</h2>
         <input
           className="email-input"
