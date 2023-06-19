@@ -2,16 +2,40 @@ import logo from "../../public/logo.svg";
 import { Link } from "react-router-dom";
 
 import { auth } from "../config/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { useState, useEffect } from "react";
 
 function SignUp() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [registerEmail, setRegisterEmail] = useState<any>("");
+  const [registerPassword, setRegisterPassword] = useState<any>("");
 
-  const signIn = async () => {
-    await createUserWithEmailAndPassword(auth, email, password);
+  const [user, setUser] = useState<any>({});
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+  }, []);
+
+  const signUp = async () => {
+    try {
+      const userEmailPassword = await createUserWithEmailAndPassword(
+        auth,
+        registerEmail,
+        registerPassword
+      );
+      console.log(userEmailPassword);
+    } catch (error) {
+      console.log(error);
+    }
   };
+  
+  function formPreventDefault(e:any) {
+    e.preventDefault();
+  }
 
   return (
     <main className="sign-in-container">
@@ -26,7 +50,8 @@ function SignUp() {
         </div>
         <p>It's modular and designed to last</p>
       </header>
-      <form className="sign-in-form-wrapper">
+      <p>{user.email}</p>
+      <form className="sign-in-form-wrapper" onSubmit={formPreventDefault}>
         <h2>Sign Up</h2>
         <input
           className="email-input"
@@ -34,7 +59,7 @@ function SignUp() {
           name="email"
           id="emailInput"
           placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => setRegisterEmail(e.target.value)}
         />
         <input
           className="password-input"
@@ -42,12 +67,12 @@ function SignUp() {
           name="password"
           id="passwordInput"
           placeholder="Password"
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={(e) => setRegisterPassword(e.target.value)}
         />
         <button
           className="sign-in-btn button-primary"
           type="submit"
-          onClick={signIn}
+          onClick={signUp}
         >
           Sign Up
         </button>
