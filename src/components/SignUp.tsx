@@ -20,7 +20,7 @@ function SignUp() {
     });
   }, []);
 
-  const signUp = async () => {
+  async function signUp() {
     try {
       const userEmailPassword = await createUserWithEmailAndPassword(
         auth,
@@ -31,7 +31,7 @@ function SignUp() {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   async function logout() {
     await signOut(auth);
