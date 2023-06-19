@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../public/logo.svg";
 import { useState } from "react";
 import { auth } from "../config/firebase";
@@ -7,22 +7,24 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 function SignIn() {
   const [signInEmail, setSignInEmail] = useState<any>("");
   const [signInpassword, setSignInPassword] = useState<any>("");
+  const [error, setError] = useState<any>("");
+  const navigate = useNavigate();
 
-  async function signin() {
+  async function signin(e: any) {
+    e.preventDefault();
+    setError("");
     try {
       const userEmailPassword = await signInWithEmailAndPassword(
         auth,
         signInEmail,
         signInpassword
       );
+      navigate("home");
       console.log(userEmailPassword);
-    } catch (error) {
-      console.log(error);
+    } catch (err: any) {
+      setError("Wrong email or password");
+      console.log(err.message);
     }
-  }
-
-  function handleSignIn (e:any) {
-    e.preventDefault();
   }
 
   return (
@@ -38,8 +40,9 @@ function SignIn() {
         </div>
         <p>It's modular and designed to last</p>
       </header>
-      <form className="sign-in-form-wrapper" onSubmit={handleSignIn}>
+      <form className="sign-in-form-wrapper">
         <h2>Sign In</h2>
+        <p>{error}</p>
         <input
           className="email-input"
           type="email"
