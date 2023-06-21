@@ -1,0 +1,8 @@
+.search-box {
+    @include inputBoxBaseStyle();
+    padding-left: 45px;
+    padding-right: 10px;
+    background-position: 10px;
+    background-image: url(/public/icon/search.svg);
+    background-repeat: no-repeat;
+  }
