@@ -2,4 +2,8 @@
     @include flexRow();
     @include AlignAllCenter();
     gap: 5px;
+
+    h1 {
+      font-size: $font-size-m;
+    }
   }
