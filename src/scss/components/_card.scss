@@ -10,20 +10,21 @@
   a {
     font-size: 14px;
   }
-  .shop-now {
-    padding: 4px 0px;
-    background-image: url(/public/icon/arrow-right.svg);
-    background-repeat: no-repeat;
-    background-position: 80px;
-
-    font-weight: $font-weight-6;
-    color: $color-primary;
-  }
-
   .card-title-wrapper {
     @include flexColumn();
     justify-content: space-between;
     padding-bottom: 20px;
+    h2 {
+      color: black;
+    }
+    p {
+      padding: 4px 0px;
+      background-image: url(/public/icon/arrow-right.svg);
+      background-repeat: no-repeat;
+      background-position: 80px;
+      font-weight: $font-weight-6;
+      color: $color-primary;
+    }
   }
   figure {
     margin: 20px 20px 10px 40px;
