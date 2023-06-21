@@ -1,5 +1,3 @@
-
-
 function FeaturedCard({
     src,
     alt,

@@ -18,13 +18,16 @@ import 'swiper/css/autoplay'
 
 import ProductCard from "./ProductCard";
 import FeaturedCard from "./FeaturedCard";
+import Nav from "./Nav";
 import { Link } from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 function Home() {
   return (
     <>
       <main className="home-container">
         <div>
+          <Nav />
           <div className="home-logo-wrapper">
             <img
               style={ {height: "20px", width: "20px"} }
@@ -39,14 +42,10 @@ function Home() {
         </div>
         <section className="search-wrapper">
           <header>
-            <p>Hi,</p>
+            <p>Hi, Abel</p>
             <h2>What are you looking for today?</h2>
           </header>
-          <input
-            className="search-box"
-            type="search"
-            placeholder="Search product"
-          />
+          <SearchBar />
         </section>
       </main>
       <section className="home-products-container">

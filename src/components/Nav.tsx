@@ -2,10 +2,7 @@
 function Nav() {
   return (
     <nav>
-        <div className="menu">
-            <div className="menu-content">
-                <p>AsdADADAD</p>
-            </div>
+        <div className="menu-btn">
         </div>
     </nav>
   )

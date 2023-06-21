@@ -1,6 +1,6 @@
 function SearchBar() {
   return (
-    <input className="search-box" type="search" placeholder="Search product" />
+    <input className="search-bar" type="search" placeholder="Search product" />
   );
 }
 
