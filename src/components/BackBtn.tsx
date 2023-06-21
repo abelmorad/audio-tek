@@ -1,6 +1,8 @@
-function BackBtn() {
+import { Link } from "react-router-dom";
+
+function BackBtn({to}:{to: string }) {
   return (
-    <div className="back-btn"></div>
+    <Link to={to} className="back-btn"></Link>
   )
 }
 
