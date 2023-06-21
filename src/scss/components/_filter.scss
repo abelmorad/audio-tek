@@ -1,0 +1,13 @@
+.filter {
+    display: flex;
+    @include AlignAllCenter();
+    background-image: url('/public/icon/sliders.svg');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    width: 92px;
+    height: 41px;
+    padding: 10px 15px;
+    padding-left: 40px;
+    border: 1px solid $color-grey;
+    border-radius: 10px;
+}
