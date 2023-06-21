@@ -2,12 +2,12 @@
   @include flexColumn();
   @include mobileXpadding();
 
-  nav {
+  div {
     @include flexRow();
     @include AlignAllCenter();
     justify-content: space-between;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 
     .menu-icon {
       background-image: url(/public/icon/menu-variant.png);

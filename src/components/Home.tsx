@@ -24,8 +24,7 @@ function Home() {
   return (
     <>
       <main className="home-container">
-        <nav>
-          <menu className="menu-icon" />
+        <div>
           <div className="home-logo-wrapper">
             <img
               style={ {height: "20px", width: "20px"} }
@@ -37,7 +36,7 @@ function Home() {
           <figure>
             <img src={user} alt="dude" />
           </figure>
-        </nav>
+        </div>
         <section className="search-wrapper">
           <header>
             <p>Hi,</p>
