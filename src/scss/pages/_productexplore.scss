@@ -1,0 +1,5 @@
+.product-explore {
+    @include flexColumn();
+    @include mobileXpadding();
+}
+  

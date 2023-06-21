@@ -1,9 +1,7 @@
-import logo from "../../public/logo.svg";
-import user from "../../public/userprofile.png";
 import headphone from "../../public/icon/headphone.svg";
 import earpads from "../../public/icon/earpads.png";
 import headband from "../../public/icon/headband.png";
-import cable from "../../public/icon/cable.svg"
+import cable from "../../public/icon/cable.svg";
 import speakerunit from "../../public/icon/speakerunit.png";
 
 import tracks from "../../public/products/tracks.png";
@@ -12,9 +10,9 @@ import tma2studiowireless from "../../public/products/tma2studiowireless.png";
 import maharishiwaistbag from "../../public/products/maharishibag.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/swiper-bundle.css'
-import 'swiper/swiper-bundle.esm.js'
-import 'swiper/css/autoplay'
+import "swiper/swiper-bundle.css";
+import "swiper/swiper-bundle.esm.js";
+import "swiper/css/autoplay";
 
 import ProductCard from "./ProductCard";
 import FeaturedCard from "./FeaturedCard";
@@ -22,24 +20,23 @@ import Nav from "./Nav";
 import { Link } from "react-router-dom";
 import SearchBar from "./SearchBar";
 
+import Logo from "./Logo";
+import MenuBtn from "./MenuBtn";
+import Avatar from "./Avatar.";
+
 function Home() {
   return (
     <>
       <main className="home-container">
-        <div>
-          <Nav />
-          <div className="home-logo-wrapper">
-            <img
-              style={ {height: "20px", width: "20px"} }
-              src={logo}
-              alt="audio tek logo"
-            />
-            <h1>Audio Tek</h1>
-          </div>
-          <figure>
-            <img src={user} alt="dude" />
-          </figure>
-        </div>
+        <Nav
+          nav={
+            <>
+              <MenuBtn />
+              <Logo />
+              <Avatar />
+            </>
+          }
+        />
         <section className="search-wrapper">
           <header>
             <p>Hi, Abel</p>
@@ -50,13 +47,8 @@ function Home() {
       </main>
       <section className="home-products-container">
         <section className="product-category-wrapper">
-        <h3>Our Products</h3>
-        <Swiper
-        autoplay
-        pagination
-        spaceBetween={10}
-        slidesPerView={1}
-        >
+          <h3>Our Products</h3>
+          <Swiper autoplay pagination spaceBetween={10} slidesPerView={1}>
             <SwiperSlide>
               <ProductCard
                 category="TMA - 2 Modular Headphone"
@@ -86,23 +78,16 @@ function Home() {
               />
             </SwiperSlide>
             <SwiperSlide>
-              <ProductCard
-                category="CO2 - Cable"
-                src={cable}
-                alt={cable}
-              />
+              <ProductCard category="CO2 - Cable" src={cable} alt={cable} />
             </SwiperSlide>
-        </Swiper>
+          </Swiper>
         </section>
         <section className="featured-card-container">
           <header className="feature-title">
             <h3>Featured Products</h3>
-            <Link to='#'>See All</Link>
+            <Link to="#">See All</Link>
           </header>
-          <Swiper
-          spaceBetween={25}
-            slidesPerView={2}
-          >
+          <Swiper spaceBetween={25} slidesPerView={2}>
             <SwiperSlide>
               <FeaturedCard
                 src={maharishiwaistbag}

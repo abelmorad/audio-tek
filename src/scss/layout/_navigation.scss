@@ -1,9 +1,7 @@
-.menu-btn {
-  background-image: url(/public/icon/bars-solid.svg);
-  background-repeat: no-repeat;
-  height: 20px;
-  width: 20px;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
+nav {
+  @include flexRow();
+  @include AlignAllCenter();
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

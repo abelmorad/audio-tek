@@ -1,11 +1,7 @@
-
-function Nav() {
+function Nav({ nav }: { nav: any }) {
   return (
-    <nav>
-        <div className="menu-btn">
-        </div>
-    </nav>
-  )
+    <nav>{nav}</nav>
+  );
 }
 
-export default Nav
+export default Nav;

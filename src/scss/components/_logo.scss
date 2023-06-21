@@ -1,0 +1,5 @@
+.home-logo-wrapper {
+    @include flexRow();
+    @include AlignAllCenter();
+    gap: 5px;
+  }
