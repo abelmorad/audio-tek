@@ -9,7 +9,7 @@ function ProductExplore() {
       <Nav
         nav={
           <>
-            <BackBtn />
+            <BackBtn to={"/home"} />
             <Logo />
             <CartBtn />
           </>
