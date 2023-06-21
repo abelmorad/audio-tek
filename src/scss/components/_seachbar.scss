@@ -1,8 +1,15 @@
-.search-box {
-    @include inputBoxBaseStyle();
-    padding-left: 45px;
-    padding-right: 10px;
-    background-position: 10px;
-    background-image: url(/public/icon/search.svg);
-    background-repeat: no-repeat;
-  }
+.search-bar {
+  background-color: $color-white;
+  color: $color-grey;
+  height: 50px;
+  width: 100%;
+  border: none;
+  outline: 1px solid $color-grey;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding-left: 45px;
+  padding-right: 10px;
+  background-position: 10px;
+  background-image: url(/public/icon/search.svg);
+  background-repeat: no-repeat;
+}
