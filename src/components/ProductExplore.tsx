@@ -1,12 +1,22 @@
-import BackBtn from "./BackBtn"
-import Nav from "./Nav"
+import Nav from "./Nav";
+import BackBtn from "./BackBtn";
+import CartBtn from "./CartBtn";
+import Logo from "./Logo";
 
 function ProductExplore() {
-    return (
-      <section className="product-explore">
+  return (
+    <section className="product-explore">
+      <Nav
+        nav={
+          <>
+            <BackBtn />
+            <Logo />
+            <CartBtn />
+          </>
+        }
+      />
+    </section>
+  );
+}
 
-      </section>
-    )
-  }
-  
-  export default ProductExplore
+export default ProductExplore;
