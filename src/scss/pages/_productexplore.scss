@@ -1,5 +1,6 @@
 .product-explore {
     @include flexColumn();
     @include mobileXpadding();
+    margin-top: 1rem;
 }
   
