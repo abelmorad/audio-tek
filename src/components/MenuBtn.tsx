@@ -1,5 +1,9 @@
+import { Link } from "react-router-dom";
+
 function MenuBtn() {
-  return <div className="menu-btn"></div>;
+  return (
+    <Link  to="/product" className="menu-btn"></Link>
+  )
 }
 
 export default MenuBtn;
