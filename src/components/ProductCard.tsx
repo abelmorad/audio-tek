@@ -10,17 +10,17 @@ function ProductCard({
   alt: string;
 }) {
   return (
-    <section className="category-card">
-      <div className="card-title-wrapper">
-        <h2>{category}</h2>
-        <Link className="shop-now" to="#">
-          Shop now
-        </Link>
-      </div>
-      <figure>
-        <img src={src} alt={alt} />
-      </figure>
-    </section>
+    <Link className="shop-now" to={"/product"}>
+      <section className="category-card">
+        <div className="card-title-wrapper">
+          <h2>{category}</h2>
+          <p>Shop now</p>
+        </div>
+        <figure>
+          <img src={src} alt={alt} />
+        </figure>
+      </section>
+    </Link>
   );
 }
 
