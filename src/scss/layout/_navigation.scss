@@ -1,30 +1,9 @@
-.menu {
+.menu-btn {
   background-image: url(/public/icon/bars-solid.svg);
   background-repeat: no-repeat;
   height: 20px;
   width: 20px;
   margin: 0;
   padding: 0;
-
-  .menu-content {
-    z-index: 10;
-    @include flexColumn();
-    background-color: $color-white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-
-    .menu-content__back-arrow {
-        background-image: url(/public/icon/chevron-left-solid.svg);
-        background-repeat: no-repeat;
-        height: 20px;
-        width: 20px;
-        margin: 0;
-        padding: 0;
-      }
-  }
-  
+  cursor: pointer;
 }
