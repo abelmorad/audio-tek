@@ -8,6 +8,7 @@ function AllProductCard({
   price,
   rating,
   reviews,
+  datatype,
 }: {
   src: string;
   alt: string;
@@ -16,9 +17,10 @@ function AllProductCard({
   price: number;
   rating: number;
   reviews: number;
+  datatype: string;
 }) {
   return (
-    <section className="all-product-card">
+    <section className="all-product-card" datatype={datatype}>
       <figure>
         <img className="featured-card-img" src={src} alt={alt} />
       </figure>
@@ -32,7 +34,7 @@ function AllProductCard({
         <img style={{ height: "10px", width: "10px" }} src={star} alt={star} />
         <p>{rating}</p>
         <div>
-            <p>{reviews} Reviews</p>
+          <p>{reviews} Reviews</p>
         </div>
       </div>
     </section>

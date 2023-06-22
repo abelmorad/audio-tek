@@ -34,6 +34,7 @@ function ProductExplore() {
       </section>
       <section className="products__card">
         <AllProductCard
+          datatype="accessories"
           src={maharishiwaistbag}
           alt={maharishiwaistbag}
           productname="Maharishi Waist Bag"
@@ -43,6 +44,7 @@ function ProductExplore() {
           reviews={50}
         />
         <AllProductCard
+          datatype="headphone"
           src={tma2studiowireless}
           alt={tma2studiowireless}
           productname="TMA-2 Studio Wireless Headphone"
@@ -52,6 +54,7 @@ function ProductExplore() {
           reviews={250}
         />
         <AllProductCard
+          datatype="cables"
           src={c17adapterneon}
           alt={c17adapterneon}
           productname="C17 Staight - 1.2m - Remote with mic"
@@ -61,6 +64,7 @@ function ProductExplore() {
           reviews={29}
         />
         <AllProductCard
+          datatype="headphone"
           src={tracks}
           alt={tracks}
           productname="Tracks"
