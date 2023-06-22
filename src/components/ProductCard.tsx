@@ -10,7 +10,7 @@ function ProductCard({
   alt: string;
 }) {
   return (
-    <Link className="shop-now" to={"/product"}>
+    <Link to={"/product"}>
       <section className="category-card">
         <div className="card-title-wrapper">
           <h2>{category}</h2>
