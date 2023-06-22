@@ -57,3 +57,39 @@
     height: 100%;
   }
 }
+
+// all product card
+.all-product-card {
+  @include flexColumn();
+  background-color: $color-white;
+  border-radius: 15px;
+  height: auto;
+  width: 165px;
+  padding: 15px 10px;
+
+  figure {
+    display: flex;
+    @include AlignAllCenter();
+
+    .featured-card-img {
+      height: 125px;
+      width: 135px;
+    }
+  }
+  .item-price-wrapper {
+    @include flexColumn();
+    text-align: start;
+    justify-content: space-between;
+    height: 100%;
+    margin-bottom: 5px
+  }
+  .__rating-reviews {
+    @include flexRow();
+    align-items: center;
+    gap: 5px;
+
+    div {
+      display: inherit;
+    }
+  }
+}
