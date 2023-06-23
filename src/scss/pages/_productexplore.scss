@@ -1,6 +1,9 @@
 .product-explore {
     @include flexColumn();
     @include mobileXpadding();
+    nav {
+        margin-bottom: $base-margin * 2;
+    }
 
     .__heading {
         h2 {
