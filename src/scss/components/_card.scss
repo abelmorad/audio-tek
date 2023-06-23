@@ -85,11 +85,11 @@
   }
   .__rating-reviews {
     @include flexRow();
-    align-items: center;
-    gap: 5px;
-
+    justify-content: space-between;
     div {
       display: inherit;
+      @include AlignAllCenter();
+      gap: 5px;
     }
   }
 }
