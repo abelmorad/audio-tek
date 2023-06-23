@@ -85,7 +85,7 @@ function Home() {
         <section className="featured-card-container">
           <header className="feature-title">
             <h3>Featured Products</h3>
-            <Link to="#">See All</Link>
+            <Link to="/product">See All</Link>
           </header>
           <Swiper spaceBetween={25} slidesPerView={2}>
             <SwiperSlide>
