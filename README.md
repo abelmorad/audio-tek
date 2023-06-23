@@ -1,7 +1,8 @@
 <h1>Audio Tek</h1>
 
-Currently in development view on mobile - press F12 and adjust to 375px dimension 
-
+Currently in development view on mobile - press F12 and adjust to 375px dimension
+<a> 
+<p align="left"><a href="https://audio-tek.vercel.app/">Live Preview</a></p>
 Sign In using
 <li>user: admin5000@gmail.com</li>
 <li>pass: AdminAbel12345</li>
