@@ -11,8 +11,16 @@ import maharishiwaistbag from "../../public/allproducts/maharishibag.png";
 import c17adapterneon from "../../public/allproducts/c17adapterneon.png";
 import tma2studiowireless from "../../public/allproducts/tma2studiowireless.png";
 import tracks from "../../public/allproducts/tracks.png";
+import { useState } from "react";
 
 function ProductExplore() {
+  //filter button open
+  const [filterBtn, setFilterBtn] = useState(Boolean);
+  const handleFilterClick = () => {
+    setFilterBtn(!filterBtn);
+    console.log("Clicked");
+  };
+
   return (
     <>
       <section className="product-explore">
@@ -30,8 +38,11 @@ function ProductExplore() {
           <h2>Products</h2>
         </div>
         <section className="__filter--container">
-          <FilterBtn />
-          <Filter />
+          <FilterBtn filterBtn={handleFilterClick} />
+          <Filter
+            closeX={handleFilterClick}
+            style={filterBtn ? { display: "flex" } : { display: "none"}}
+          />
         </section>
       </section>
       <section className="products__card">

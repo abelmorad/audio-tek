@@ -1,10 +1,9 @@
-
-function FilterBtn() {
+function FilterBtn( {filterBtn } : { filterBtn: any}) {
   return (
-    <>
-        <div className="filter-btn">Filter</div>
-    </>
-  )
+      <div onClick={filterBtn} className="filter-btn">
+        Filter
+      </div>
+  );
 }
 
-export default FilterBtn
+export default FilterBtn;

@@ -3,12 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/swiper-bundle.esm.js";
 
-function Filter() {
+function Filter({ style, closeX }: { style: any; closeX: any }) {
   return (
-    <div className="filter">
+    <div style={style} className="filter">
       <div className="filter__heading__close">
         <h2>Filter</h2>
-        <div className="close-btn"></div>
+        <div onClick={closeX} className="close-btn"></div>
       </div>
       <div className="__category">
         <p>Category</p>
