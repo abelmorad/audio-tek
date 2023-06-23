@@ -13,9 +13,12 @@
 }
 
 .filter {
-  @include flexColumn();
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
   position: absolute;
   left: 0;
+  height: 100%;
   width: 100%;
   padding: 1.5rem 0rem 1.5rem 1.5rem;
   background-color: $color-white;
@@ -94,5 +97,33 @@
         color: $color-white;
       }
     }
+  }
+
+  .price-range {
+    @include flexColumn();
+    padding-right: 1.5rem;
+
+    div {
+      margin-top: 1rem;
+      @include flexRow();
+      justify-content: space-between;
+      .price-range__input {
+        border: none;
+        padding-left: 15px;
+        outline: 1px solid $color-grey;
+        border-radius: 10px;
+        height: 45px;
+        width: 155px;
+      }
+    }
+  }
+  .filter__btn {
+    width: 326px;
+    padding: 20px 10px;
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: $font-weight-6;
+    border-radius: 10px;
+    border: none;
   }
 }

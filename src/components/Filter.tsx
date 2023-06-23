@@ -46,17 +46,33 @@ function Filter() {
         <p>Sort By</p>
         <div className="sort__container">
           <div className="sort__container--flexrow">
-              <div className="sort__btn">Popularity</div>
-              <div className="sort__btn">Newest</div>
-              <div className="sort__btn">Oldest</div>
+            <div className="sort__btn">Popularity</div>
+            <div className="sort__btn">Newest</div>
+            <div className="sort__btn">Oldest</div>
           </div>
           <div className="sort__container--flexrow">
-              <div className="sort__btn">High Price</div>
-              <div className="sort__btn">Low Price</div>
-              <div className="sort__btn">Review</div>
+            <div className="sort__btn">High Price</div>
+            <div className="sort__btn">Low Price</div>
+            <div className="sort__btn">Review</div>
           </div>
         </div>
       </div>
+      <div className="price-range">
+        <p>Price Range</p>
+        <div>
+          <input
+            className="price-range__input"
+            type="text"
+            placeholder="Min Price"
+          />
+          <input
+            className="price-range__input"
+            type="text"
+            placeholder="Max Price"
+          />
+        </div>
+      </div>
+      <button className="filter__btn">Apply Filter</button>
     </div>
   );
 }
