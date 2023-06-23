@@ -2,6 +2,7 @@ import Nav from "./Nav";
 import BackBtn from "./BackBtn";
 import CartBtn from "./CartBtn";
 import Logo from "./Logo";
+import FilterBtn from "./FilterBtn";
 import Filter from "./Filter";
 
 import AllProductCard from "./AllProductCard";
@@ -29,6 +30,7 @@ function ProductExplore() {
           <h2>Products</h2>
         </div>
         <section className="__filter--container">
+          <FilterBtn />
           <Filter />
         </section>
       </section>

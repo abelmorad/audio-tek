@@ -1,7 +1,64 @@
+import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import "swiper/swiper-bundle.esm.js";
+
 function Filter() {
   return (
-    <div className="filter">Filter</div>
-  )
+    <div className="filter">
+      <div className="filter__heading__close">
+        <h2>Filter</h2>
+        <div className="close-btn"></div>
+      </div>
+      <div className="__category">
+        <p>Category</p>
+        <div className="category__links--container">
+          <Swiper spaceBetween={10} slidesPerView={3}>
+            <SwiperSlide>
+              <Link className="category__link" to="#">
+                Headphone
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link className="category__link" to="#">
+                Headband
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link className="category__link" to="#">
+                Earpads
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link className="category__link" to="#">
+                Cables
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link className="category__link" to="#">
+                Accessories
+              </Link>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </div>
+      <div className="sort">
+        <p>Sort By</p>
+        <div className="sort__container">
+          <div className="sort__container--flexrow">
+              <div className="sort__btn">Popularity</div>
+              <div className="sort__btn">Newest</div>
+              <div className="sort__btn">Oldest</div>
+          </div>
+          <div className="sort__container--flexrow">
+              <div className="sort__btn">High Price</div>
+              <div className="sort__btn">Low Price</div>
+              <div className="sort__btn">Review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Filter
+export default Filter;
