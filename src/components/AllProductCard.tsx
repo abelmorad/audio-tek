@@ -31,8 +31,10 @@ function AllProductCard({
         </b>
       </div>
       <div className="__rating-reviews">
-        <img style={{ height: "10px", width: "10px" }} src={star} alt={star} />
-        <p>{rating}</p>
+        <div>
+          <img style={{ height: "10px", width: "10px" }} src={star} alt={star} />
+          <p>{rating}</p>
+        </div>
         <div>
           <p>{reviews} Reviews</p>
         </div>
