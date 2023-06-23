@@ -1,0 +1,30 @@
+.search {
+  @include flexColumn();
+  @include mobileXpadding();
+
+  nav {
+    p {
+      font-weight: $font-weight-6;
+    }
+    margin-bottom: $base-margin * 2;
+  }
+  .search-bar {
+    margin-bottom: $base-margin * 2;
+  }
+  .search__latest {
+    p {
+      margin-bottom: $base-margin;
+    }
+    .__history--wrapper {
+      @include flexColumn();
+
+      .__history {
+        @include flexRow();
+        background-image: url("/public/icon/clock-regular.svg");
+        background-repeat: no-repeat;
+        padding-left: 40px;
+        margin-bottom: $base-margin * 0.5;
+      }
+    }
+  }
+}
