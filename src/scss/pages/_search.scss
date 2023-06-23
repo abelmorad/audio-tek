@@ -20,6 +20,7 @@
 
       .__history {
         @include flexRow();
+        justify-content: space-between;
         background-image: url("/public/icon/clock-regular.svg");
         background-repeat: no-repeat;
         padding-left: 40px;
