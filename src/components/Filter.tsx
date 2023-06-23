@@ -62,12 +62,12 @@ function Filter({ style, closeX }: { style: any; closeX: any }) {
         <div>
           <input
             className="price-range__input"
-            type="text"
+            type="number"
             placeholder="Min Price"
           />
           <input
             className="price-range__input"
-            type="text"
+            type="number"
             placeholder="Max Price"
           />
         </div>
