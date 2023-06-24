@@ -19,14 +19,17 @@ function Search() {
       <SearchBar />
       <section className="search__latest">
         <p>Latest search</p>
-        <div className="__history--wrapper">
-          <div className="__history">
+        <div className="history--wrapper">
+          <p className="history">
             TMA2 Wireles1313s <CloseBtn />
-          </div>
-          <div className="__history">
+          </p>
+          <p className="history">
             TMA2 Wireless <CloseBtn />
-          </div>
+          </p>
         </div>
+      </section>
+      <section className="popular-product">
+        <p>Popular product</p>
       </section>
     </section>
   );
