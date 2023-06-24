@@ -6,8 +6,16 @@ import CloseBtn from "./CloseBtn";
 import PopularProductCard from "./PopularProductCard";
 
 import tma2 from "../../public/allproducts/tma2studiowireless.png"
+import { useState } from "react";
+
+
 
 function Search() {
+    const [history, setHistory] = useState(false);
+    const handleXBtn = () => {
+        setHistory(true);
+    }
+
   return (
     <section className="search">
       <Nav
@@ -23,13 +31,13 @@ function Search() {
       <section className="search__latest">
         <p>Latest search</p>
         <div className="history--wrapper">
-          <div className="history">
+          <div style={history ? {display: "none"} : {}} className="history">
             <span>TMA2 Wireles1313s</span>
-            <CloseBtn />
+            <CloseBtn closeX={handleXBtn} />
           </div>
-          <div className="history">
+          <div style={history ? {display: "none"} : {}} className="history">
             <span>TMA2 Wireles1313s</span>
-            <CloseBtn />
+            <CloseBtn closeX={handleXBtn} />
           </div>
         </div>
       </section>
