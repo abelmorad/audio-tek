@@ -15,17 +15,20 @@
     p {
       margin-bottom: $base-margin;
     }
-    .__history--wrapper {
+    .history--wrapper {
       @include flexColumn();
 
-      .__history {
+      .history {
         @include flexRow();
         justify-content: space-between;
         background-image: url("/public/icon/clock-regular.svg");
         background-repeat: no-repeat;
         padding-left: 40px;
-        margin-bottom: $base-margin * 0.5;
+        margin-bottom: $base-margin;
       }
     }
+  }
+  .popular-product {
+    margin-top: $base-margin;
   }
 }
