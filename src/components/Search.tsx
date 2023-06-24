@@ -20,12 +20,12 @@ function Search() {
       <section className="search__latest">
         <p>Latest search</p>
         <div className="history--wrapper">
-          <p className="history">
-            TMA2 Wireles1313s <CloseBtn />
-          </p>
-          <p className="history">
-            TMA2 Wireless <CloseBtn />
-          </p>
+          <div className="history">
+            <span>TMA2 Wireles1313s</span> <CloseBtn />
+          </div>
+          <div className="history">
+            <span>TMA2 Wireles1313s</span> <CloseBtn />
+          </div>
         </div>
       </section>
       <section className="popular-product">
