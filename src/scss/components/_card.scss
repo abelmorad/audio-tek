@@ -81,7 +81,7 @@
     text-align: start;
     justify-content: space-between;
     height: 100%;
-    margin-bottom: 5px
+    margin-bottom: 5px;
   }
   .__rating-reviews {
     @include flexRow();
@@ -90,6 +90,37 @@
       display: inherit;
       @include AlignAllCenter();
       gap: 5px;
+    }
+  }
+}
+
+//popular product card
+.popular-card--container {
+  @include flexRow();
+  gap: 1rem;
+  margin-top: $base-margin;
+  img {
+    @include flexColumn();
+    @include AlignAllCenter();
+    border-radius: 10px;
+    background-color: $color-light-grey-2;
+    width: 70px;
+    height: 70px;
+  }
+  div {
+    @include flexColumn();
+    text-align: start;
+    place-content: center;
+    justify-content: space-between;
+    .rating-reviews {
+      @include flexRow();
+      justify-content: space-between;
+
+      div {
+        @include flexRow();
+        @include AlignAllCenter();
+        gap: 5px;
+      }
     }
   }
 }
