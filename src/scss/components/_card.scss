@@ -1,5 +1,6 @@
 .category-card {
   @include flexRow();
+  justify-content: space-between;
   text-align: start;
   padding-left: 20px;
   border-radius: 10px;
@@ -12,10 +13,17 @@
   }
   .card-title-wrapper {
     @include flexColumn();
-    justify-content: space-between;
+    place-content: center;
     padding-bottom: 20px;
     h2 {
       color: $color-default;
+    }
+  }
+  figure {
+    margin: 20px 20px 10px 40px;
+    img {
+      height: 100px;
+      width: 100px;
     }
     p {
       padding: 4px 0px;
@@ -25,9 +33,6 @@
       font-weight: $font-weight-6;
       color: $color-primary;
     }
-  }
-  figure {
-    margin: 20px 20px 10px 40px;
   }
 }
 
