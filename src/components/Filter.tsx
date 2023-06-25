@@ -15,7 +15,7 @@ function Filter({ style, closeX }: { style: any; closeX: any }) {
       <div className="__category">
         <p>Category</p>
         <div className="category__links--container">
-          <Swiper spaceBetween={10} slidesPerView={3}>
+          <Swiper spaceBetween={20} slidesPerView={3}>
             <SwiperSlide>
               <Link className="category__link" to="#">
                 Headphone
