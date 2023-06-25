@@ -11,10 +11,6 @@ import { useState } from "react";
 
 
 function Search() {
-    const [history, setHistory] = useState(false);
-    const handleXBtn = () => {
-        setHistory(true);
-    }
 
   return (
     <section className="search">
@@ -31,13 +27,13 @@ function Search() {
       <section className="search__latest">
         <p>Latest search</p>
         <div className="history--wrapper">
-          <div style={history ? {display: "none"} : {}} className="history">
+          <div className="history">
             <span>TMA2 Wireles1313s</span>
-            <CloseBtn closeX={handleXBtn} />
+            <CloseBtn  />
           </div>
-          <div style={history ? {display: "none"} : {}} className="history">
+          <div className="history">
             <span>TMA2 Wireles1313s</span>
-            <CloseBtn closeX={handleXBtn} />
+            <CloseBtn  />
           </div>
         </div>
       </section>

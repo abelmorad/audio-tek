@@ -21,7 +21,7 @@ function AllProductCard() {
     <>
       {
         productData.map(data => (
-        <section className="all-product-card" datatype={data.category}>
+        <section className="all-product-card" key={data.key} datatype={data.category}>
           <figure>
             <img className="featured-card-img" src={data.image} />
           </figure>
