@@ -51,9 +51,10 @@
       .category__link {
         display: flex;
         align-items: start;
-        padding: 10px 15px 10px 0px;
-        width: 150px;
-        height: 25px;
+        align-items: center;
+        padding: 10px 15px 10px 15px;
+        width: max-content;
+        height: 24px;
         background-color: $color-white;
         color: $color-grey;
         border-radius: 30px;
