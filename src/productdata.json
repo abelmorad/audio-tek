@@ -1,0 +1,41 @@
+{
+    "audioTek": "Audio Tek",
+    "products": [
+        {
+            "category": [
+                {
+                    "headphone": [
+                        {
+                            "productName": "TM-2 Studio Wireless Headphone",
+                            "image": "/public/allproducts/tma2studiowireless.png",
+                            "description": "Empowering music creators with the freedom to create wirelessly, TMA-2 Studio Wireless+ features W+ Link with ultra-low latency wireless and lossless audio, Bluetooth 5.0 with +80h playback, and a coiled hi-fi cable.",
+                            "price": "350",
+                            "rating": "4.9",
+                            "reviews": "250"
+                        },
+                        {
+                            "productName": "Tracks",
+                            "image": "/public/allproducts/tracks.png",
+                            "description": "Designed around an aluminum brace that acts as a rail system for the sliding ear cups. Phone jack cable with one-button controls and microphone. The customizable slider comes in 2 different colors and the 40mm speaker offers a better frequency distribution and a full-spectrum sound quality with an impressive bass and detailed high frequency notes.",
+                            "price": "65",
+                            "rating": "3.5",
+                            "reviews": "49"
+                        }
+                    ],
+                    "headband": [
+                        {}
+                    ],
+                    "earpad": [
+                        {}
+                    ],
+                    "cable": [
+                        {}
+                    ],
+                    "accessory": [
+                        {}
+                    ]
+                }
+            ]
+        }
+    ]
+}
