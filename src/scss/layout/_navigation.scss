@@ -1,7 +1,9 @@
 nav {
-  @include flexRow();
+  display: grid;
+  grid-template-columns: auto auto 35px;
   @include AlignAllCenter();
   justify-content: space-between;
+  height: 35px;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
