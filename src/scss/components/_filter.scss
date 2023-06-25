@@ -50,8 +50,8 @@
 
       .category__link {
         display: flex;
-        @include AlignAllCenter();
-        padding: 10px 15px;
+        align-items: start;
+        padding: 10px 15px 10px 0px;
         width: 150px;
         height: 25px;
         background-color: $color-white;
