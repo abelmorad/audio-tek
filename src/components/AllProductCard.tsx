@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 function AllProductCard() {
   const [productData, setProductData] = useState<any[]>([]);
 
-  useEffect(() => {
+ useEffect(() => {
     axios
       .get("/src/productdata.json")
       .then((res) => {
@@ -19,9 +19,12 @@ function AllProductCard() {
 
   return (
     <>
-      {
-        productData.map(data => (
-        <section className="all-product-card" key={data.key} datatype={data.category}>
+      {productData.map((data) => (
+        <section
+          className="all-product-card"
+          key={data.key}
+          datatype={data.category}
+        >
           <figure>
             <img className="featured-card-img" src={data.image} />
           </figure>
