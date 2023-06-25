@@ -1,45 +1,50 @@
 import star from "../../public/icon/star.svg";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
-function AllProductCard({
-  src,
-  alt,
-  productname,
-  currency,
-  price,
-  rating,
-  reviews,
-  datatype,
-}: {
-  src: string;
-  alt: string;
-  productname: string;
-  currency: string;
-  price: number;
-  rating: number;
-  reviews: number;
-  datatype: string;
-}) {
+function AllProductCard() {
+  const [productData, setProductData] = useState<any[]>([]);
+
+  useEffect(() => {
+    axios
+      .get("/src/productdata.json")
+      .then((res) => {
+        setProductData(res.data.products);
+        console.log(res.data.products);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
-    <section className="all-product-card" datatype={datatype}>
-      <figure>
-        <img className="featured-card-img" src={src} alt={alt} />
-      </figure>
-      <div className="item-price-wrapper">
-        <p>{productname}</p>
-        <b>
-          {currency} {price}
-        </b>
-      </div>
-      <div className="__rating-reviews">
-        <div>
-          <img style={{ height: "10px", width: "10px" }} src={star} alt={star} />
-          <p>{rating}</p>
-        </div>
-        <div>
-          <p>{reviews} Reviews</p>
-        </div>
-      </div>
-    </section>
+    <>
+      {
+        productData.map(data => (
+        <section className="all-product-card" datatype={data.category}>
+          <figure>
+            <img className="featured-card-img" src={data.image} />
+          </figure>
+          <div className="item-price-wrapper">
+            <p>{data.productName}</p>
+            <b>USD {data.price}</b>
+          </div>
+          <div className="__rating-reviews">
+            <div>
+              <img
+                style={{ height: "10px", width: "10px" }}
+                src={star}
+                alt={star}
+              />
+              <p>{data.rating}</p>
+            </div>
+            <div>
+              <p>{data.reviews} Reviews</p>
+            </div>
+          </div>
+        </section>
+      ))}
+    </>
   );
 }
 
