@@ -7,7 +7,7 @@ function AllProductCard() {
 
   useEffect(() => {
     axios
-      .get("public/productdata.json")
+      .get("https://raw.githubusercontent.com/abelmorad/audio-tek/main/public/productdata.json")
       .then((res) => {
         setProductData(res.data.products);
       })
