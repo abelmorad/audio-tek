@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 function AllProductCard() {
   const [productData, setProductData] = useState<any[]>([]);
 
- useEffect(() => {
+  useEffect(() => {
     axios
-      .get("/src/productdata.json")
+      .get("/public/productdata.json")
       .then((res) => {
         setProductData(res.data.products);
       })
