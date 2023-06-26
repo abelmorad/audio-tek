@@ -7,7 +7,7 @@ function AllProductCard() {
 
  useEffect(() => {
     axios
-      .get("/public/productdata.json")
+      .get("/src/productdata.json")
       .then((res) => {
         setProductData(res.data.products);
       })
