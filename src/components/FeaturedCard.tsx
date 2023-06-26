@@ -1,28 +1,43 @@
-function FeaturedCard({
-  src,
-  alt,
-  productname,
-  currency,
-  price,
-}: {
-  src: string;
-  alt: string;
-  productname: string;
-  currency: string;
-  price: number;
-}) {
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import "swiper/swiper-bundle.esm.js";
+import "swiper/css/autoplay";
+
+function FeaturedCard() {
+  const [productData, setProductData] = useState<any[]>([]);
+
+  useEffect(() => {
+    axios
+      .get("/src/productdata.json")
+      .then((res) => {
+        setProductData(res.data.products.slice(0,4));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   return (
-    <section className="featured-card-wrapper">
-      <figure>
-        <img className="featured-card-img" src={src} alt={alt} />
-      </figure>
-      <div className="item-price-wrapper">
-        <p>{productname}</p>
-        <b>
-          {currency} {price}
-        </b>
-      </div>
-    </section>
+    <Swiper spaceBetween={20} slidesPerView={2.5}>
+      {productData.map((data) => (
+        <SwiperSlide key={data.key}>
+          <section className="featured-card-wrapper">
+            <figure>
+              <img
+                className="featured-card-img"
+                src={data.image}
+                alt={data.productName}
+              />
+            </figure>
+            <div className="item-price-wrapper">
+              <p>{data.productName}</p>
+              <b>USD {data.price}</b>
+            </div>
+          </section>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }
 
