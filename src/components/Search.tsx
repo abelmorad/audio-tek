@@ -17,7 +17,7 @@ function Search() {
       <Nav
         nav={
           <>
-            {/* <BackBtn /> */}
+            <BackBtn to="/product"/>
             <p>Search</p>
             <CartBtn />
           </>
@@ -29,11 +29,9 @@ function Search() {
         <div className="history--wrapper">
           <div className="history">
             <span>TMA2 Wireles1313s</span>
-            {/* <CloseBtn  /> */}
           </div>
           <div className="history">
             <span>TMA2 Wireles1313s</span>
-            {/* <CloseBtn  /> */}
           </div>
         </div>
       </section>
