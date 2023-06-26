@@ -4,8 +4,6 @@ import CartBtn from "./CartBtn";
 import SearchBar from "./SearchBar";
 import PopularProductCard from "./PopularProductCard";
 
-import tma2 from "../../public/allproducts/tma2studiowireless.png"
-
 function Search() {
 
   return (
