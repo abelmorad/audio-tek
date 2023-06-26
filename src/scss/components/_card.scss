@@ -41,16 +41,16 @@
   @include flexColumn();
   background-color: $color-white;
   border-radius: 15px;
-  height: 230px;
-  width: auto;
+  height: 240px;
+  width: 130px;
 
   figure {
     display: flex;
     @include AlignAllCenter();
 
     .featured-card-img {
-      height: 125px;
-      width: 135px;
+      height: 100px;
+      width: 100px;
     }
   }
   .item-price-wrapper {
