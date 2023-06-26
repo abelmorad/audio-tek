@@ -1,0 +1,135 @@
+{
+    "audioTek": "Audio Tek",
+    "products": [
+        {
+            "key": "011",
+            "category": "headphone",
+            "productName": "TM-2 Studio Wireless Headphone",
+            "image": "/public/allproducts/tma2studiowireless.png",
+            "description": "Empowering music creators with the freedom to create wirelessly, TMA-2 Studio Wireless+ features W+ Link with ultra-low latency wireless and lossless audio, Bluetooth 5.0 with +80h playback, and a coiled hi-fi cable.",
+            "price": 350,
+            "rating": 4.9,
+            "reviews": 250
+        },
+        {
+            "key": "012",
+            "category": "headphone",
+            "productName": "Tracks",
+            "image": "/public/allproducts/tracks.png",
+            "description": "Designed around an aluminum brace that acts as a rail system for the sliding ear cups. Phone jack cable with one-button controls and microphone. The customizable slider comes in 2 different colors and the 40mm speaker offers a better frequency distribution and a full-spectrum sound quality with an impressive bass and detailed high frequency notes.",
+            "price": 65,
+            "rating": 3.5,
+            "reviews": 49
+        },
+        {
+            "key": "013",
+            "category": "headphone",
+            "productName": "TMA-2 Studio XE",
+            "image": "/public/allproducts/TMA-2StudioXE.png",
+            "description": "Professional modular studio headphones with lightweight design, highly detailed audio and high isolation for a dynamic creative process.",
+            "price": 180,
+            "rating": 4.5,
+            "reviews": 131
+        },
+        {
+            "key": "021",
+            "category": "accessory",
+            "productName": "Maharishi Waistbag",
+            "image": "/public/allproducts/maharishibag.png",
+            "description": "Nylon waistbag. The capsule features the Hyperdub mascot – the 3rd Ear Cat – the bastard child of a Japanese lucky cat and a failed CIA experiment, 'acoustic kitty' in reflective 3M prints and embroidery.",
+            "price": 120,
+            "rating": 4.1,
+            "reviews": 81
+        },
+        {
+            "key": "022",
+            "category": "accessory",
+            "productName": "A04 · Hardcase",
+            "image": "/public/allproducts/tma2hardcase.png",
+            "description": "The A04 hard case is designed to protect your headphones from bumps, dust and scratches. Covered by a matte PU and featuring a soft velvet interior. Fits any TMA-2 headphone.",
+            "price": 35,
+            "rating": 4.7,
+            "reviews": 35
+        },
+        {
+            "key": "031",
+            "category": "cable",
+            "productName": "C17 · Straight - 1.2m - Remote with mic",
+            "image": "/public/allproducts/c17adapterneon.png",
+            "description": "Neon straight 1.2m thermo plastic cable with a one button remote and inline microphone. Compatible with most smartphones.",
+            "price": 25,
+            "rating": 3.6,
+            "reviews": 29
+        },
+        {
+            "key": "032",
+            "category": "cable",
+            "productName": "C02 · Coiled - 1.5m - Adapter",
+            "image": "/public/allproducts/c02.png",
+            "description": "Coiled black 1.5m thermo plastic cable with soft touch surface. Extends up to 3.2m. Perfect for DJing or small studio use. Comes with 1/4 to 1/8 screw-on adapter.",
+            "price": 25,
+            "rating": 3.5,
+            "reviews": 53
+        },
+        {
+            "key": "041",
+            "category": "speaker unit",
+            "productName": "S02 · Punchy sound - Bio-diaphragm",
+            "image": "/public/allproducts/s02.png",
+            "description": "Engineered with a 40mm speaker diaphragm made from stiff bio-cellulose to reduce distortion, and designed with an internal vent tuned for a clear and punchy middle bass.",
+            "price": 90,
+            "rating": 4.9,
+            "reviews": 99
+        },
+        {
+            "key": "042",
+            "category": "speaker unit",
+            "productName": "S10 · Wireless - Detailed sound - Bio-diaphragm",
+            "image": "/public/allproducts/s10.png",
+            "description": "Bluetooth® 5.0 with +40h playback time, dual mics, USB-C fast charging. Engineered with a 40mm speaker diaphragm made from stiff bio-cellulose for more defined high-frequency details, more pronounced mid-range, better dynamics, and more natural tonality. Supports also analog cable.",
+            "price": 130,
+            "rating": 5,
+            "reviews": 133
+        },
+        {
+            "key": "051",
+            "category": "earpad",
+            "productName": "E01 · On ear - Microfiber",
+            "image": "/public/allproducts/e01.png",
+            "description": "Slim on-ear cushions covered in microfiber. Direct and open sound representation. Slim silhouette. Good for all-round purposes.",
+            "price": 25,
+            "rating": 4,
+            "reviews": 10
+        },
+        {
+            "key": "052",
+            "category": "earpad",
+            "productName": "E02 · On ear - PU leather",
+            "image": "/public/allproducts/e02.png",
+            "description": "Soft on-ear memory foam cushions covered with PU leather. The thickness and materials gives high isolation and a punchy sound. Strong bass and low end dynamics.",
+            "price": 35,
+            "rating": 4.1,
+            "reviews": 25
+        },
+        {
+            "key": "061",
+            "category": "headband",
+            "productName": "H01 · Slim - PU foam",
+            "image": "/public/allproducts/h01.png",
+            "description": "Slim and lightweight polycarbonate headband with soft, durable PU foam padding.",
+            "price": 25,
+            "rating": 4,
+            "reviews": 31
+        },
+        {
+            "key": "062",
+            "category": "headband",
+            "productName": "H03 · High comfort - PU leather",
+            "image": "/public/allproducts/h03.png",
+            "description": "High comfort headband with memory foam and head padding covered with PU leather for longer sessions.",
+            "price": 60,
+            "rating": 4.8,
+            "reviews": 61
+        }
+    ]
+}
