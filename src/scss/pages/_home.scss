@@ -28,10 +28,11 @@
   }
 
   .featured-card-container {
-    @include mobileXpadding();
+    padding-left: 1.5rem;
 
     .feature-title {
       @include flexRow();
+      @include mobileXpadding();
       align-items: center;
       justify-content: space-between;
 
