@@ -14,7 +14,6 @@ function ProductCard() {
       .get("/src/productdata.json")
       .then((res) => {
         setProductData(res.data.products.slice(0,4));
-        console.log(res.data.products);
       })
       .catch((err) => {
         console.log(err);
