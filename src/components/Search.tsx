@@ -2,13 +2,9 @@ import Nav from "./Nav";
 import BackBtn from "./BackBtn";
 import CartBtn from "./CartBtn";
 import SearchBar from "./SearchBar";
-import CloseBtn from "./CloseBtn";
 import PopularProductCard from "./PopularProductCard";
 
 import tma2 from "../../public/allproducts/tma2studiowireless.png"
-import { useState } from "react";
-
-
 
 function Search() {
 
