@@ -11,7 +11,7 @@ function ProductCard() {
 
   useEffect(() => {
     axios
-      .get("https://raw.githubusercontent.com/abelmorad/audio-tek/main/public/productdata.json")
+      .get("public/productdata.json")
       .then((res) => {
         setProductData(res.data.products.slice(0,4));
       })
