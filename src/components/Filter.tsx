@@ -16,35 +16,35 @@ function Filter({ style, closeX }: { style: any; closeX: any }) {
         <p>Category</p>
         <div className="category__links--container">
           <Swiper spaceBetween={20} slidesPerView={3}>
-            <SwiperSlide>
-              <Link className="category__link" to="#">
-                Headphone
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Link className="category__link" to="#">
-                Headband
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Link className="category__link" to="#">
-                Speaker Unit
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Link className="category__link" to="#">
-                Earpads
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Link className="category__link" to="#">
-                Cables
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide>
-              <Link className="category__link" to="#">
+          <SwiperSlide>
+              <p className="category__option">
                 Accessories
-              </Link>
+              </p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p className="category__option">
+                Speaker Unit
+              </p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p className="category__option">
+                Headphone
+              </p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p className="category__option">
+                Headband
+              </p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p className="category__option">
+                Earpads
+              </p>
+            </SwiperSlide>
+            <SwiperSlide>
+              <p className="category__option">
+                Cables
+              </p>
             </SwiperSlide>
           </Swiper>
         </div>
