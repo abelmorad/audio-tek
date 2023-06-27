@@ -8,7 +8,7 @@ import PopularProductCard from "./PopularProductCard";
 import { useState, useRef } from "react";
 
 function Search() {
-  const [searchItems, setSearchItems] = useState<any>([]);
+  const [searchValue, setSearchValue] = useState<any>([]);
   const inputRef = useRef<any>();
 
   function onSubmit(e: any) {
@@ -16,10 +16,14 @@ function Search() {
 
     const value = inputRef.current.value;
     if (value === "") return;
-    setSearchItems((prev: any) => {
+    setSearchValue((prev: any) => {
       return [...prev, value];
     });
     inputRef.current.value = "";
+  }
+
+  function handleDeleteSearch() {
+    console.log("Clicked!")
   }
 
   return (
@@ -39,10 +43,10 @@ function Search() {
       <section className="search__latest">
         <p>Latest search</p>
         <div className="history--wrapper">
-          {searchItems.map((item: any) => (
+          {searchValue.map((item: any) => (
             <div className="history">
               <span>{item}</span>
-              <CloseBtn />
+              <CloseBtn closeX={handleDeleteSearch} />
             </div>
           ))}
         </div>
