@@ -48,10 +48,10 @@
     .category__links--container {
       @include flexRow();
 
-      .category__link {
+      .category__option {
+        margin: 0;
         display: flex;
-        align-items: start;
-        align-items: center;
+       @include AlignAllCenter();
         padding: 10px 15px 10px 15px;
         width: max-content;
         height: 24px;
@@ -59,7 +59,7 @@
         color: $color-grey;
         border-radius: 30px;
       }
-      .category__link:hover {
+      .category__option:hover {
         background-color: $color-primary;
         color: $color-white;
       }
