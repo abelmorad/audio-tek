@@ -49,14 +49,14 @@
       @include flexRow();
 
       .category__option {
-        margin: 0;
         display: flex;
        @include AlignAllCenter();
-        padding: 10px 15px 10px 15px;
-        width: max-content;
+        width: 130px;
         height: 24px;
         background-color: $color-white;
         color: $color-grey;
+        outline: none;
+        border: none;
         border-radius: 30px;
       }
       .category__option:hover {
@@ -86,6 +86,7 @@
         background-color: $color-white;
         color: $color-default;
         outline: 1px solid $color-default;
+        border: none;
         border-radius: 10px;
       }
       .sort__btn:hover {
