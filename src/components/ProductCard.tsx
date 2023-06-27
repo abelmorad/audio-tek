@@ -11,9 +11,11 @@ function ProductCard() {
 
   useEffect(() => {
     axios
-      .get("https://raw.githubusercontent.com/abelmorad/audio-tek/main/public/productdata.json")
+      .get(
+        "https://raw.githubusercontent.com/abelmorad/audio-tek/main/public/productdata.json"
+      )
       .then((res) => {
-        setProductData(res.data.products.slice(0,4));
+        setProductData(res.data.products.slice(0, 4));
       })
       .catch((err) => {
         console.log(err);
@@ -22,8 +24,8 @@ function ProductCard() {
   return (
     <Swiper autoplay pagination spaceBetween={10} slidesPerView={1}>
       {productData.map((data) => (
-          <SwiperSlide key={data.key}>
-            <Link to={"/product"} >
+        <SwiperSlide key={data.key}>
+          <Link to={"/product"}>
             <section className="category-card">
               <div className="card-title-wrapper">
                 <h2>{data.productName}</h2>
@@ -34,7 +36,7 @@ function ProductCard() {
               </figure>
             </section>
           </Link>
-          </SwiperSlide>
+        </SwiperSlide>
       ))}
     </Swiper>
   );

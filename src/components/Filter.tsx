@@ -1,50 +1,69 @@
-import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/swiper-bundle.esm.js";
 
 import CloseBtn from "./CloseBtn";
 
-function Filter({ style, closeX }: { style: any; closeX: any }) {
+function Filter({
+  style,
+  closeX,
+  // filtersubmit,
+  filteraccessory,
+  filterspeaker,
+  filterheadphone,
+  filterheadband,
+  filterearpad,
+  filtercable
+}: {
+  style: any;
+  closeX: any;
+  // filtersubmit: any;
+  filteraccessory: any;
+  filterspeaker: any;
+  filterheadphone: any;
+  filterheadband: any;
+  filterearpad: any;
+  filtercable: any;
+}) {
   return (
-    <div style={style} className="filter">
+    <div  style={style} className="filter">
       <div className="filter__heading__close">
         <h2>Filter</h2>
-        <CloseBtn closeX={closeX}  />
+        <CloseBtn closeX={closeX} />
       </div>
       <div className="__category">
         <p>Category</p>
         <div className="category__links--container">
-          <Swiper spaceBetween={20} slidesPerView={3}>
-          <SwiperSlide>
-              <p className="category__option">
+          <Swiper spaceBetween={80} slidesPerView={3}>
+            <SwiperSlide>
+              <div className="category__option" onClick={filteraccessory}>
                 Accessories
-              </p>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <p className="category__option">
+              <div className="category__option" onClick={filterspeaker}>
                 Speaker Unit
-              </p>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <p className="category__option">
+              <div className="category__option" onClick={filterheadphone}>
                 Headphone
-              </p>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <p className="category__option">
+              <div className="category__option" onClick={filterheadband}>
                 Headband
-              </p>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <p className="category__option">
+              <div className="category__option" onClick={filterearpad}>
                 Earpads
-              </p>
+              </div>
             </SwiperSlide>
             <SwiperSlide>
-              <p className="category__option">
+              <div className="category__option" onClick={filtercable}>
                 Cables
-              </p>
+              </div>
             </SwiperSlide>
           </Swiper>
         </div>

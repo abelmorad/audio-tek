@@ -18,7 +18,8 @@ function AllProductCard() {
 
   return (
     <>
-      {productData.map((data) => (
+      {
+      productData.map((data) => (
         <section
           className="all-product-card"
           key={data.key}
