@@ -1,29 +1,15 @@
 import star from "../../public/icon/star.svg";
 
-function PopularProductCard({
-  popularCardSrc,
-  popularCardAlt,
-  popularProductName,
-  currency,
-  price,
-  rating,
-  reviews,
-}: {
-  popularCardSrc: string;
-  popularCardAlt: string;
-  popularProductName: string;
-  currency: string;
-  price: number;
-  rating: number;
-  reviews: number;
-}) {
+function PopularProductCard() {
+ 
   return (
-    <div className="popular-card--container">
-      <img src={popularCardSrc} alt={popularCardAlt} />
+   <>
+     <div className="popular-card--container">
+      <img src="" alt="" />
       <div>
-        <p>{popularProductName}</p>
+        <p>{}</p>
         <b>
-          {currency} {price}
+          {} {}
         </b>
         <div className="rating-reviews">
           <div>
@@ -32,14 +18,15 @@ function PopularProductCard({
               src={star}
               alt={star}
             />
-            <p>{rating}</p>
+            <p>{}</p>
           </div>
           <div>
-            <p>{reviews} Reviews</p>
+            <p>{} Reviews</p>
           </div>
         </div>
       </div>
     </div>
+   </>
   );
 }
 
