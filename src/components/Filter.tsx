@@ -7,17 +7,17 @@ import CloseBtn from "./CloseBtn";
 function Filter({
   style,
   closeX,
-  // filtersubmit,
+  filtersubmit,
   filteraccessory,
   filterspeaker,
   filterheadphone,
   filterheadband,
   filterearpad,
-  filtercable
+  filtercable,
 }: {
   style: any;
   closeX: any;
-  // filtersubmit: any;
+  filtersubmit: any;
   filteraccessory: any;
   filterspeaker: any;
   filterheadphone: any;
@@ -26,7 +26,7 @@ function Filter({
   filtercable: any;
 }) {
   return (
-    <div  style={style} className="filter">
+    <form onSubmit={filtersubmit} style={style} className="filter">
       <div className="filter__heading__close">
         <h2>Filter</h2>
         <CloseBtn closeX={closeX} />
@@ -99,7 +99,7 @@ function Filter({
         </div>
       </div>
       <button className="filter__btn">Apply Filter</button>
-    </div>
+    </form>
   );
 }
 

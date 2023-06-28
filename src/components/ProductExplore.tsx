@@ -10,6 +10,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 function ProductExplore() {
+  function handleApplyFilter() {}
+
   const [productData, setProductData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -24,22 +26,12 @@ function ProductExplore() {
         console.log(err);
       });
   }, []);
+
   //filter button open
   const [filterBtn, setFilterBtn] = useState(Boolean);
   const handleFilterClick = () => {
     setFilterBtn(!filterBtn);
   };
-
-  const filterResult = (categoryItem: string) => {
-    const result = productData.filter((currentData) => {
-      return currentData.category === categoryItem;
-    });
-    setProductData(result);
-  };
-
-  // function handleApplyFilter(e:any) {
-  //   e.preventefault();
-  // }
 
   return (
     <>
@@ -61,25 +53,22 @@ function ProductExplore() {
           <div className="show-all-btn">Show All</div>
           <FilterBtn filterBtn={handleFilterClick} />
           <Filter
-            // filtersubmit={handleApplyFilter}
+            filtersubmit={handleApplyFilter}
             closeX={handleFilterClick}
             style={filterBtn ? { display: "flex" } : { display: "none" }}
-            filteraccessory={() => filterResult("accessory")}
-            filterspeaker={() => filterResult("speaker unit")}
-            filterheadband={() => filterResult("headband")}
-            filterheadphone={() => filterResult("headphone")}
-            filtercable={() => filterResult("cable")}
-            filterearpad={() => filterResult("earpad")}
+            filteraccessory={() => {}}
+            filterspeaker={() => {}}
+            filterheadband={() => {}}
+            filterheadphone={() => {}}
+            filtercable={() => {}}
+            filterearpad={() => {}}
           />
         </section>
       </section>
       <section className="products__card">
         <>
           {productData.map((data) => (
-            <section
-              className="all-product-card"
-              key={data.key}
-            >
+            <section className="all-product-card" key={data.key}>
               <figure>
                 <img className="featured-card-img" src={data.image} />
               </figure>
